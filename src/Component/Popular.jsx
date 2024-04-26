@@ -1,7 +1,7 @@
 
 const Popular = () => {
     return (
-        <div className="px-4 md:px-8 lg:px-[100px] pt-10 pb-10  text-black font-semibold">
+        <div className="px-4 md:px-8 lg:px-[100px] pt-10 pb-1 font-semibold">
             
             <p className="mb-10 font-bold text-3xl text-center">Popular Drawing</p>
             <div className="grid grid-cols-4 gap-8 ">

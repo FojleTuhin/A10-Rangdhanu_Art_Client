@@ -11,6 +11,8 @@ import Login from './Pages/Login';
 import Register from './Pages/Register';
 import FirebaseProvider from './Firebase/FirebaseProvider';
 import Error from './Pages/Error';
+import AddCraftItem from './Pages/AddCraftItem';
+import ViewDetails from './Pages/ViewDetails';
 
 const router = createBrowserRouter([
   {
@@ -29,6 +31,14 @@ const router = createBrowserRouter([
       {
         path: '/register',
         element: <Register></Register>
+      },
+      {
+        path:'/addCraft',
+        element:<AddCraftItem></AddCraftItem>
+      },
+      {
+        path:'/viewDetails',
+        element:<ViewDetails></ViewDetails>
       }
     ]
   }

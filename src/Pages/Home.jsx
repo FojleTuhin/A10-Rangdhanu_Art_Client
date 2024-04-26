@@ -1,11 +1,19 @@
 import Banner from "../Component/Banner";
+import CraftItem from "../Component/CraftItem";
 import Popular from "../Component/Popular";
+import Purchase from "../Component/Purchase";
 
 const Home = () => {
     return (
-        <div className="bg-[#F8F6F1]">
-           <Banner></Banner>
-           <Popular></Popular>
+        <div >
+
+          
+                
+                <Banner></Banner>
+                <CraftItem></CraftItem>
+                <Popular></Popular>
+                <Purchase></Purchase>
+           
         </div>
     );
 };
