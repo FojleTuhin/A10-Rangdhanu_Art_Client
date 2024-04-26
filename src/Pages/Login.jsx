@@ -1,5 +1,8 @@
+import { useContext } from 'react';
 import { FaFacebook, FaGoogle } from 'react-icons/fa';
-import { Link } from 'react-router-dom';
+import { Link, Navigate, useLocation, useNavigate } from 'react-router-dom';
+import { AuthContext } from '../Firebase/FirebaseProvider';
+import toast from 'react-hot-toast';
 
 
 const logInStyle = {
@@ -10,14 +13,55 @@ const logInStyle = {
     backgroundRepeat: "no-repeat",
 }
 
-const handleLogIn = (e) => {
-    e.preventDefault()
-    const email = e.target.email.value;
-    const password = e.target.password.value;
 
-}
 
 const Login = () => {
+
+    const {signIn, googleLogin, facebookLogin}= useContext(AuthContext)
+    const location = useLocation();
+    const navigate = useNavigate();
+
+    const handleGoogleLogin = () => {
+        googleLogin()
+            .then(result => {
+                
+                toast.success('Successfully sign in')
+                console.log(result);
+            })
+            .catch(error => {
+                toast.error('Something wrong')
+            })
+    }
+
+    const handleFacebookLogin = () => {
+        facebookLogin()
+            .then(result => {
+                toast.success('Successfully sign in')
+
+            })
+            .catch(error => {
+                toast.error('Something wrong')
+            })
+    }
+
+
+    const handleLogIn = (e) => {
+        e.preventDefault()
+        const email = e.target.email.value;
+        const password = e.target.password.value;
+
+
+        signIn(email, password)
+        .then(result =>{
+            navigate(location?.state ? location.state : '/')
+        })
+        .catch(error=>{
+            toast.error("Password or email don't match")
+        })
+    
+    }
+
+
     return (
         <div style={logInStyle}>
             <div className="hero min-h-screen ">
@@ -49,8 +93,8 @@ const Login = () => {
 
                     </form>
                     <div className="flex gap-8 justify-evenly mb-3 px-4">
-                        <button className="btn "><FaGoogle />Google </button>
-                        <button className="btn"><FaFacebook />Facebook</button>
+                        <button onClick={handleGoogleLogin}  className="btn "><FaGoogle />Google </button>
+                        <button onClick={handleFacebookLogin} className="btn"><FaFacebook />Facebook</button>
                     </div>
 
                     <div className="mb-8 px-6">

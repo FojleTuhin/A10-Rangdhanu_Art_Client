@@ -1,45 +1,89 @@
+import { useContext } from 'react';
 import toast, { Toaster } from 'react-hot-toast';
 import { FaFacebook, FaGoogle } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../Firebase/FirebaseProvider';
 
 
-const RegisterStyle = {
-    backgroundImage:
-        "url('https://i.ibb.co/mS4fXSD/layered-waves-haikei.png')",
-    height: "130vh",
-    backgroundSize: "cover",
-    backgroundRepeat: "no-repeat",
-}
-
-const handleLSignIn = (e) => {
-    e.preventDefault()
-    const name = e.target.name.value;
-    const email = e.target.email.value;
-    const password = e.target.password.value;
-    const photo = e.target.photo.value;
-
-    console.log(name, email, password);
 
 
-    if (password.length < 6) {
-        toast.error("Password must be 6 characters.");
-        return
-    }
 
-    if (!/^(?=.*[a-z])(?=.*[A-Z]).+$/.test(password)) {
-        toast.error("Password must be an upper case and lower case.");
-    }
-
-    else (
-        toast.success('Successfully Sign in!')
-
-    )
-
-}
 
 
 
 const Register = () => {
+
+    const RegisterStyle = {
+        backgroundImage:
+            "url('https://i.ibb.co/mS4fXSD/layered-waves-haikei.png')",
+        height: "130vh",
+        backgroundSize: "cover",
+        backgroundRepeat: "no-repeat",
+    }
+
+    const {createUser, updateUser, googleLogin, facebookLogin} = useContext(AuthContext);
+
+    const handleGoogleLogin = () => {
+        googleLogin()
+            .then(result => {
+                
+                toast.success('Successfully sign in')
+                console.log(result);
+            })
+            .catch(error => {
+                toast.error('Something wrong')
+            })
+    }
+
+    const handleFacebookLogin = () => {
+        facebookLogin()
+            .then(result => {
+                toast.success('Successfully sign in')
+
+            })
+            .catch(error => {
+                toast.error('Something wrong')
+            })
+    }
+
+
+
+    const handleLSignIn = (e) => {
+        e.preventDefault()
+        const name = e.target.name.value;
+        const email = e.target.email.value;
+        const password = e.target.password.value;
+        const photo = e.target.photo.value;
+    
+        console.log(name, email, password);
+    
+    
+        if (password.length < 6) {
+            toast.error("Password must be 6 characters.");
+            return
+        }
+    
+        if (!/^(?=.*[a-z])(?=.*[A-Z]).+$/.test(password)) {
+            toast.error("Password must be an upper case and lower case.");
+        }
+    
+        else (
+            toast.success('Successfully Sign in!')
+    
+        )
+
+        createUser(email,password)
+        .then(result=>{
+            updateUser(name, photo)
+            console.log(result);
+        })
+        .catch(error=>{
+            console.log(error);
+        })
+    
+    }
+
+
     return (
         <div style={RegisterStyle}>
             <div><Toaster /></div>
@@ -78,14 +122,14 @@ const Register = () => {
                                 </label>
                             </div>
                             <div className="form-control mt-6">
-                                <button className="btn bg-[#8aabab] font-extrabold text-white">Sign in</button>
+                                <button className="btn bg-[#8aabab] font-extrabold text-white">Sign up</button>
                             </div>
 
 
                         </form>
                         <div className="flex gap-8 justify-evenly mb-3 px-4">
-                            <button className="btn "><FaGoogle />Google </button>
-                            <button className="btn"><FaFacebook />Facebook</button>
+                            <button onClick={handleGoogleLogin} className="btn "><FaGoogle />Google </button>
+                            <button onClick={handleFacebookLogin} className="btn"><FaFacebook />Facebook</button>
                         </div>
                         <div className="mb-8 px-6 text-center">
                             <p>Already have an account? <span className="font-bold text-blue-600"><Link to='/login'>Login</Link></span></p>
