@@ -1,8 +1,11 @@
+import Banner from "../Component/Banner";
+import Popular from "../Component/Popular";
 
 const Home = () => {
     return (
-        <div>
-            <h1>I am frm home</h1>
+        <div className="bg-[#F8F6F1]">
+           <Banner></Banner>
+           <Popular></Popular>
         </div>
     );
 };

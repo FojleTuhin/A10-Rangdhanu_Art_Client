@@ -10,10 +10,12 @@ import Root from './Pages/Root';
 import Login from './Pages/Login';
 import Register from './Pages/Register';
 import FirebaseProvider from './Firebase/FirebaseProvider';
+import Error from './Pages/Error';
 
 const router = createBrowserRouter([
   {
     path: '/',
+    errorElement:<Error></Error>,
     element: <Root></Root>,
     children: [
       {
