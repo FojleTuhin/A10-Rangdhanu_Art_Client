@@ -1,28 +1,55 @@
-import React from 'react';
+import toast, { Toaster } from 'react-hot-toast';
 import { FaFacebook, FaGoogle } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 
-const handleLSignIn=(e)=>{
+
+const RegisterStyle = {
+    backgroundImage:
+        "url('https://i.ibb.co/mS4fXSD/layered-waves-haikei.png')",
+    height: "130vh",
+    backgroundSize: "cover",
+    backgroundRepeat: "no-repeat",
+}
+
+const handleLSignIn = (e) => {
     e.preventDefault()
     const name = e.target.name.value;
     const email = e.target.email.value;
     const password = e.target.password.value;
     const photo = e.target.photo.value;
 
-    console.log(name, email, password, photo);
+    console.log(name, email, password);
+
+
+    if (password.length < 6) {
+        toast.error("Password must be 6 characters.");
+        return
+    }
+
+    if (!/^(?=.*[a-z])(?=.*[A-Z]).+$/.test(password)) {
+        toast.error("Password must be an upper case and lower case.");
+    }
+
+    else (
+        toast.success('Successfully Sign in!')
+
+    )
+
 }
 
 
 
 const Register = () => {
     return (
-        <div className="hero min-h-screen ">
+        <div style={RegisterStyle}>
+            <div><Toaster /></div>
+            <div className="hero min-h-screen ">
                 <div className=" flex-col ">
                     <div className="text-center mt-5 mb-5">
-                        <h1 className="text-5xl font-bold animate__animated animate__backInDown">Register now!</h1>
+                        <h1 className="text-4xl font-bold">Register now!</h1>
                     </div>
                     <div className="card shrink-0 w-full shadow-2xl bg-[#c8d7d7]">
-                        <form onSubmit={handleLSignIn}  className="card-body">
+                        <form onSubmit={handleLSignIn} className="card-body">
                             <div className="form-control">
                                 <label className="label">
                                     <span className="label-text">Name</span>
@@ -57,8 +84,8 @@ const Register = () => {
 
                         </form>
                         <div className="flex gap-8 justify-evenly mb-3 px-4">
-                            <button  className="btn "><FaGoogle />Google </button>
-                            <button  className="btn"><FaFacebook />Facebook</button>
+                            <button className="btn "><FaGoogle />Google </button>
+                            <button className="btn"><FaFacebook />Facebook</button>
                         </div>
                         <div className="mb-8 px-6 text-center">
                             <p>Already have an account? <span className="font-bold text-blue-600"><Link to='/login'>Login</Link></span></p>
@@ -69,6 +96,7 @@ const Register = () => {
                     </div>
                 </div>
             </div>
+        </div>
     );
 };
 
