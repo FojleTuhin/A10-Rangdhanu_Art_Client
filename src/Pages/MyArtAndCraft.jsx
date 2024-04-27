@@ -1,7 +1,8 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { useLoaderData } from "react-router-dom";
 import { AuthContext } from "../Firebase/FirebaseProvider";
-import { FaStar } from "react-icons/fa6";
+import { FaPen, FaStar } from "react-icons/fa6";
+import { MdDelete } from "react-icons/md";
 
 const MyArtAndCraft = () => {
     const items = useLoaderData();
@@ -9,7 +10,27 @@ const MyArtAndCraft = () => {
 
 
     const item = items.filter(item => item.email === user.email);
+   
 
+    const handleDelete=(id)=>{
+        Swal.fire({
+            title: "Are you sure?",
+            text: "You won't be able to revert this!",
+            icon: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#3085d6",
+            cancelButtonColor: "#d33",
+            confirmButtonText: "Yes, delete it!"
+          }).then((result) => {
+            if (result.isConfirmed) {
+              Swal.fire({
+                title: "Deleted!",
+                text: "Your file has been deleted.",
+                icon: "success"
+              });
+            }
+          });
+    }
 
 
     return (
@@ -17,7 +38,7 @@ const MyArtAndCraft = () => {
             <div className="bg-[#EBFBE5] text-[#3EA570] py-4">
                 <h1 className="font-bold text-xl text-center">My Art and Craft</h1>
             </div>
-            <div className="flex gap-6 justify-center flex-wrap">
+            <div className="flex gap-6 justify-center flex-wrap mt-5">
                 {
                     item.map(data =>
                         <div key={data._id}>
@@ -42,10 +63,17 @@ const MyArtAndCraft = () => {
                                             <FaStar />
                                             <p>{data.rating}</p>
                                         </div>
+                                        
 
 
                                     </div>
                                     <hr className="bg-[#D1D1D1] mt-3 mb-3" />
+
+                                    <div className="flex justify-evenly">
+                                        <button className="btn bg-[#EBFBE5] text-xl border-[#3EA570] text-[#3EA570]"><FaPen /></button>
+
+                                        <button onClick={()=>handleDelete(data._id)}  className="btn bg-red-500 text-xl border-none text-white"><MdDelete /></button>
+                                    </div>
 
 
                                 </div>

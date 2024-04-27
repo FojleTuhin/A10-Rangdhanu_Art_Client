@@ -47,13 +47,13 @@ const router = createBrowserRouter([
       },
       {
         path:'/viewDetails/:id',
-        element:<ViewDetails></ViewDetails>,
+        element:<PrivateRoute><ViewDetails></ViewDetails></PrivateRoute>,
         loader:()=>fetch('http://localhost:5000/item')
         
       }, 
       {
         path:'/allArtCraft/viewDetails/:id',
-        element:<ViewDetails></ViewDetails>,
+        element:<PrivateRoute><ViewDetails></ViewDetails></PrivateRoute>,
         loader:()=>fetch('http://localhost:5000/item')
         
       },
