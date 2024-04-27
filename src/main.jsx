@@ -14,6 +14,8 @@ import Error from './Pages/Error';
 import AddCraftItem from './Pages/AddCraftItem';
 import ViewDetails from './Pages/ViewDetails';
 import AllArtCraft from './Pages/AllArtCraft';
+import MyArtAndCraft from './Pages/MyArtAndCraft';
+import PrivateRoute from './Pages/PrivateRoute';
 
 const router = createBrowserRouter([
   {
@@ -36,7 +38,7 @@ const router = createBrowserRouter([
       },
       {
         path:'/addCraft',
-        element:<AddCraftItem></AddCraftItem>
+        element:<PrivateRoute><AddCraftItem></AddCraftItem></PrivateRoute>
       },
       {
         path:'/allArtCraft',
@@ -54,7 +56,12 @@ const router = createBrowserRouter([
         element:<ViewDetails></ViewDetails>,
         loader:()=>fetch('http://localhost:5000/item')
         
-      } 
+      },
+      {
+        path:'/myArtAndCraft',
+        element:<PrivateRoute><MyArtAndCraft></MyArtAndCraft></PrivateRoute>,
+        loader:()=>fetch('http://localhost:5000/item')
+      }
     ]
   }
 ])

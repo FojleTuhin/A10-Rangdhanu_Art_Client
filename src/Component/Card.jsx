@@ -19,7 +19,7 @@ const Card = ({item}) => {
         <div>
             <div>
 
-                <div className="card w-[300px] bg-base-100 shadow-xl ">
+                <div className="card w-[300px]  shadow-xl ">
                     <figure className="px-6 pt-6">
                         <img src={image} className="rounded-xl" />
                     </figure>

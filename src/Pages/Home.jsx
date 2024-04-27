@@ -9,7 +9,7 @@ const Home = () => {
     const items =useLoaderData();
     return (
         <div >
-
+            
 
 
             <Banner></Banner>

@@ -67,7 +67,7 @@ const AddCraftItem = () => {
                             <span className="label-text text-black font-bold">Item_name</span>
                         </label>
                         <label className="input-group">
-                            <input type="text" name="name" placeholder="Item Name" className="input input-bordered w-full bg-none bg-[#f4f3f0] text-black border-black" />
+                            <input type="text" name="name" required placeholder="Item Name" className="input input-bordered w-full bg-none bg-[#f4f3f0] text-black border-black" />
                         </label>
                     </div>
                     <div className="form-control md:w-1/2">
@@ -75,7 +75,7 @@ const AddCraftItem = () => {
                             <span className="label-text text-black font-bold">Subcategory_name</span>
                         </label>
                         <label className="input-group">
-                            <input type="text" name="subcategory" placeholder="Subcategory_name" className="input input-bordered w-full bg-none bg-[#f4f3f0] text-black border-black" />
+                            <input type="text" name="subcategory" required placeholder="Subcategory_name" className="input input-bordered w-full bg-none bg-[#f4f3f0] text-black border-black" />
                         </label>
                     </div>
                 </div>
@@ -87,7 +87,7 @@ const AddCraftItem = () => {
                             <span className="label-text text-black font-bold">Image</span>
                         </label>
                         <label className="input-group">
-                            <input type="text" name="image" placeholder="Image URL" className="input input-bordered w-full bg-none bg-[#f4f3f0] text-black border-black" />
+                            <input type="text" name="image" required placeholder="Image URL" className="input input-bordered w-full bg-none bg-[#f4f3f0] text-black border-black" />
                         </label>
                     </div>
                     <div className="form-control md:w-1/2">
@@ -95,7 +95,7 @@ const AddCraftItem = () => {
                             <span className="label-text text-black font-bold">Price</span>
                         </label>
                         <label className="input-group">
-                            <input type="number" name="price" placeholder="Price" className="input input-bordered w-full bg-none bg-[#f4f3f0] text-black border-black" />
+                            <input type="number" name="price" required placeholder="Price" className="input input-bordered w-full bg-none bg-[#f4f3f0] text-black border-black" />
                         </label>
                     </div>
                 </div>
@@ -106,7 +106,7 @@ const AddCraftItem = () => {
                             <span className="label-text text-black font-bold">Rating</span>
                         </label>
                         <label className="input-group">
-                            <input type="number" name="rating" placeholder="Rating" className="input input-bordered w-full bg-none bg-[#f4f3f0] text-black border-black" />
+                            <input type="number" name="rating" required placeholder="Rating" className="input input-bordered w-full bg-none bg-[#f4f3f0] text-black border-black" />
                         </label>
                     </div>
                     <div className="form-control md:w-1/2">
@@ -114,7 +114,7 @@ const AddCraftItem = () => {
                             <span className="label-text text-black font-bold">Customization</span>
                         </label>
                         <label className="input-group">
-                            <input type="text" name="customization" placeholder="Yes or No" className="input input-bordered w-full bg-none bg-[#f4f3f0] text-black border-black" />
+                            <input type="text" name="customization" required placeholder="Yes or No" className="input input-bordered w-full bg-none bg-[#f4f3f0] text-black border-black" />
                         </label>
                     </div>
                 </div>
@@ -125,7 +125,7 @@ const AddCraftItem = () => {
                             <span className="label-text text-black font-bold">Processing_time</span>
                         </label>
                         <label className="input-group">
-                            <input type="date" name="processing_time" placeholder="processing_time" className="input input-bordered w-full bg-none bg-[#f4f3f0] text-black border-black" />
+                            <input type="date" name="processing_time" required placeholder="processing_time" className="input input-bordered w-full bg-none bg-[#f4f3f0] text-black border-black" />
                         </label>
                     </div>
                     <div className="form-control md:w-1/2">
@@ -133,7 +133,7 @@ const AddCraftItem = () => {
                             <span className="label-text text-black font-bold">Stock_status</span>
                         </label>
                         <label className="input-group">
-                            <input type="text" name="stockStatus" placeholder="In stock or not" className="input input-bordered w-full bg-none bg-[#f4f3f0] text-black border-black" />
+                            <input type="text" name="stockStatus" required placeholder="Yes or No" className="input input-bordered w-full bg-none bg-[#f4f3f0] text-black border-black" />
                         </label>
                     </div>
                 </div>
@@ -144,7 +144,7 @@ const AddCraftItem = () => {
                             <span className="label-text text-black font-bold">Description</span>
                         </label>
                         <label className="input-group">
-                            <input type="text" name="description" placeholder="Description" className="input input-bordered w-full bg-none bg-[#f4f3f0] text-black border-black" />
+                            <input type="text" name="description" required placeholder="Description" className="input input-bordered w-full bg-none bg-[#f4f3f0] text-black border-black" />
                         </label>
                     </div>
 
