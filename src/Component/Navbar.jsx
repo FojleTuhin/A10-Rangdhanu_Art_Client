@@ -9,7 +9,6 @@ const Navbar = () => {
 
 
     const { user, logOut } = useContext(AuthContext)
-    console.log();
 
     const handleSignOut = () => {
 
@@ -27,10 +26,6 @@ const Navbar = () => {
         <Link to='/allArtCraft'><li><a className="font-medium">All Art & craft</a></li></Link>
         <Link to='/AddCraft'><li><a className="font-medium">Add Craft</a></li></Link>
         <Link to='/MyArtAndCraft'><li><a className="font-medium">My Art&Craft</a></li></Link>
-
-
-
-
     </>
     return (
         <div className="px-4 md:px-8 lg:px-[100px] bg-[#FFF] text-black">
@@ -42,11 +37,7 @@ const Navbar = () => {
                         </div>
                         <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
                             {links}
-                            {/* {
-                                user && <div className="tooltip" data-tip={user.displayName}>
-                                    <img className="w-12 h-12 border border-black mr-3 rounded-full" src={user.photoURL} />
-                                </div>
-                            } */}
+                          
 
                             {
                                 user ?
@@ -84,11 +75,7 @@ const Navbar = () => {
 
 
 
-                    {/* {
-                        user && <div className="tooltip" data-tip={user.displayName}>
-                            <img className="w-12 h-12 border border-black mr-3 rounded-full" src={user.photoURL} />
-                        </div>
-                    } */}
+                   
 
                     {
                         user ?

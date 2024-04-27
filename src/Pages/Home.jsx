@@ -1,10 +1,12 @@
+import { useLoaderData } from "react-router-dom";
 import Banner from "../Component/Banner";
 import Card from "../Component/Card";
-import CraftItem from "../Component/CraftItem";
 import Popular from "../Component/Popular";
 import Purchase from "../Component/Purchase";
 
 const Home = () => {
+
+    const items =useLoaderData();
     return (
         <div >
 
@@ -13,9 +15,11 @@ const Home = () => {
             <Banner></Banner>
             <div className="px-4 md:px-8 lg:px-[100px] pt-10 pb-1">
                 
-                <p className="text-2xl font-medium mb-7">Craft item</p>
+                <p className="text-2xl font-medium mb-7">Craft item : {items.length}</p>
                 <div className="flex gap-6 justify-center flex-wrap">
-                    <Card></Card>
+                    {
+                        items.map(item=><Card key={item._id} item={item}></Card>)
+                    }
                 </div>
 
             </div>
