@@ -2,6 +2,8 @@ import { useContext } from 'react';
 import { AuthContext } from '../Firebase/FirebaseProvider';
 import { Link } from 'react-router-dom';
 import { FaRegUser } from 'react-icons/fa';
+import { Tooltip } from 'react-tooltip';
+
 
 const Navbar = () => {
 
@@ -22,7 +24,7 @@ const Navbar = () => {
 
     const links = <>
         <Link to='/'><li><a className="font-medium">Home</a></li></Link>
-        <Link to='/allArtAndCraft'><li><a className="font-medium">All Art & craft</a></li></Link>
+        <Link to='/allArtCraft'><li><a className="font-medium">All Art & craft</a></li></Link>
         <Link to='/AddCraft'><li><a className="font-medium">Add Craft</a></li></Link>
         <Link to='/MyArtAndCraft'><li><a className="font-medium">My Art&Craft</a></li></Link>
 
@@ -40,16 +42,22 @@ const Navbar = () => {
                         </div>
                         <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
                             {links}
-                            {
-                                user && <div className="tooltip" data-tip={user.email}>
+                            {/* {
+                                user && <div className="tooltip" data-tip={user.displayName}>
                                     <img className="w-12 h-12 border border-black mr-3 rounded-full" src={user.photoURL} />
                                 </div>
-                            }
+                            } */}
 
                             {
                                 user ?
 
+                                <div className='z-40'>
+                                <a id="clickable"><img className="w-12 h-12 border border-black mr-3 rounded-full" src={user.photoURL} /></a>
+                                <Tooltip anchorSelect="#clickable" clickable>
+                                    <button className='text-center font-bold m-auto'>{user.displayName}</button>
                                     <Link> <a onClick={handleSignOut} className=" border border-black flex gap-2 justify-center items-center px-6 py-3 font-medium rounded-3xl"><FaRegUser /> Sign out</a></Link>
+                                </Tooltip>
+                            </div>
                                     :
                                     <div className='md:flex gap-2 mt-4'>
                                         <Link to='/login'> <a className=" border border-black flex gap-2 justify-center items-center px-6 py-3 font-medium rounded-3xl"><FaRegUser /> Login</a></Link>
@@ -76,16 +84,22 @@ const Navbar = () => {
 
 
 
-                    {
-                        user && <div className="tooltip" data-tip={user.email}>
+                    {/* {
+                        user && <div className="tooltip" data-tip={user.displayName}>
                             <img className="w-12 h-12 border border-black mr-3 rounded-full" src={user.photoURL} />
                         </div>
-                    }
+                    } */}
 
                     {
                         user ?
 
-                            <Link> <a onClick={handleSignOut} className=" border border-black flex gap-2 justify-center items-center px-6 py-3 font-medium rounded-3xl"><FaRegUser /> Sign out</a></Link>
+                            <div className='z-40'>
+                                <a id="clickable"><img className="w-12 h-12 border border-black mr-3 rounded-full" src={user.photoURL} /></a>
+                                <Tooltip anchorSelect="#clickable" clickable>
+                                    <button className='font-bold mb-4'>{user.displayName}</button>
+                                    <Link> <a onClick={handleSignOut} className=" border border-black flex gap-2 justify-center items-center px-6 py-3 font-medium rounded-3xl"><FaRegUser /> Sign out</a></Link>
+                                </Tooltip>
+                            </div>
                             :
                             <div className='flex gap-2'>
                                 <Link to='/login'> <a className=" border border-black flex gap-2 justify-center items-center px-6 py-3 font-medium rounded-3xl"><FaRegUser /> Login</a></Link>

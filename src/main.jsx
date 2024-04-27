@@ -13,6 +13,7 @@ import FirebaseProvider from './Firebase/FirebaseProvider';
 import Error from './Pages/Error';
 import AddCraftItem from './Pages/AddCraftItem';
 import ViewDetails from './Pages/ViewDetails';
+import AllArtCraft from './Pages/AllArtCraft';
 
 const router = createBrowserRouter([
   {
@@ -35,6 +36,10 @@ const router = createBrowserRouter([
       {
         path:'/addCraft',
         element:<AddCraftItem></AddCraftItem>
+      },
+      {
+        path:'/allArtCraft',
+        element:<AllArtCraft></AllArtCraft>
       },
       {
         path:'/viewDetails',
