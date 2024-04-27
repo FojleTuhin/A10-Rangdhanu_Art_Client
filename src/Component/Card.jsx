@@ -17,7 +17,7 @@ const Card = ({item}) => {
 
     return (
         <div>
-            <div className="px-4 md:px-8 lg:px-[100px] pt-10 pb-1">
+            <div>
 
                 <div className="card w-[300px] bg-base-100 shadow-xl ">
                     <figure className="px-6 pt-6">
@@ -40,7 +40,7 @@ const Card = ({item}) => {
                         <hr className="bg-[#D1D1D1] mt-3 mb-3" />
 
                         <div className="card-actions">
-                            <Link to={`viewDetails/${_id}`}><button className="btn bg-[#4F95FF] text-white">View details</button></Link>
+                            <Link to={`viewDetails/${_id}`}><button className="btn bg-[#3EA570] text-white">View details</button></Link>
                         </div>
                     </div>
                 </div>

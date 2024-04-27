@@ -18,7 +18,7 @@ const Home = () => {
                 <p className="text-2xl font-medium mb-7">Craft item : {items.length}</p>
                 <div className="flex gap-6 justify-center flex-wrap">
                     {
-                        items.map(item=><Card key={item._id} item={item}></Card>)
+                        items.slice(0,6).map(item=><Card key={item._id} item={item}></Card>)
                     }
                 </div>
 

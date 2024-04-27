@@ -5,12 +5,7 @@ import { useLoaderData, useParams } from "react-router-dom";
 
 const ViewDetails = () => {
 
-    // const jobs = useLoaderData();
-    // const { _id } = useParams();
-    // const idInt = parseInt(_id)
-    // const job = jobs.find(job => job._id === idInt);
-    // console.log(job.itemName);
-
+   
     const items =useLoaderData();
     const {id}=useParams();
     const item = items.find(item => item._id === id);
