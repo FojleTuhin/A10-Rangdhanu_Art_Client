@@ -1,8 +1,9 @@
 import { useContext, useState } from "react";
-import { useLoaderData } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
 import { AuthContext } from "../Firebase/FirebaseProvider";
 import { FaPen, FaStar } from "react-icons/fa6";
 import { MdDelete } from "react-icons/md";
+import Swal from "sweetalert2";
 
 const MyArtAndCraft = () => {
     const items = useLoaderData();
@@ -10,9 +11,9 @@ const MyArtAndCraft = () => {
 
 
     const item = items.filter(item => item.email === user.email);
-   
 
-    const handleDelete=(id)=>{
+
+    const handleDelete = (id) => {
         Swal.fire({
             title: "Are you sure?",
             text: "You won't be able to revert this!",
@@ -21,20 +22,31 @@ const MyArtAndCraft = () => {
             confirmButtonColor: "#3085d6",
             cancelButtonColor: "#d33",
             confirmButtonText: "Yes, delete it!"
-          }).then((result) => {
+        }).then((result) => {
             if (result.isConfirmed) {
-              Swal.fire({
-                title: "Deleted!",
-                text: "Your file has been deleted.",
-                icon: "success"
-              });
+
+
+                fetch(`http://localhost:5000/item/${id}`,{
+                    method:'DELETE'
+                })
+                    .then(res => res.json())
+                    .then(data => {
+                        console.log(data);
+                        if (data.deletedCount > 0) {
+                            Swal.fire({
+                                title: "Deleted!",
+                                text: "Your file has been deleted.",
+                                icon: "success"
+                            });
+                        }
+                    })
             }
-          });
+        });
     }
 
 
     return (
-        <div className='bg-[#F8F6F1] px-4 md:px-8 lg:px-[100px]  text-black '>
+        <div className='bg-[#F8F6F1] px-4 md:px-8 lg:px-[100px] pb-10 text-black '>
             <div className="bg-[#EBFBE5] text-[#3EA570] py-4">
                 <h1 className="font-bold text-xl text-center">My Art and Craft</h1>
             </div>
@@ -51,28 +63,28 @@ const MyArtAndCraft = () => {
                                     <div className="flex items-center justify-between">
 
                                         <p className="font-bold">{data.price} tk</p>
-                                       
+
                                         <p className=" text-[#4F95FF]">Stock: {data.stockStatus}</p>
 
                                     </div>
 
 
                                     <div className="flex justify-between">
-                                        <p>Customization:{data.customization}</p>
+                                        <p>Customization: {data.customization}</p>
                                         <div className="flex items-center gap-2">
                                             <FaStar />
                                             <p>{data.rating}</p>
                                         </div>
-                                        
+
 
 
                                     </div>
                                     <hr className="bg-[#D1D1D1] mt-3 mb-3" />
 
                                     <div className="flex justify-evenly">
-                                        <button className="btn bg-[#EBFBE5] text-xl border-[#3EA570] text-[#3EA570]"><FaPen /></button>
+                                        <Link to={`updateCraft/${data._id}`}><button className="btn bg-[#EBFBE5] text-xl border-[#3EA570] text-[#3EA570]"><FaPen /></button></Link>
 
-                                        <button onClick={()=>handleDelete(data._id)}  className="btn bg-red-500 text-xl border-none text-white"><MdDelete /></button>
+                                        <button onClick={() => handleDelete(data._id)} className="btn bg-red-500 text-xl border-none text-white"><MdDelete /></button>
                                     </div>
 
 
