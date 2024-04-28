@@ -52,7 +52,6 @@ const router = createBrowserRouter([
         path:'/viewDetails/:id',
         element:<PrivateRoute><ViewDetails></ViewDetails></PrivateRoute>,
         loader:()=>fetch('https://rangdhanu-art-server.vercel.app/item')
-        
       }, 
       {
         path:'/allArtCraft/viewDetails/:id',
@@ -78,7 +77,12 @@ const router = createBrowserRouter([
       {
         path:'/similarCategories',
         element:<SimilarCategories></SimilarCategories>
-      }
+      },
+      {
+        path:'/viewDetails/:name',
+        element:<SimilarCategories></SimilarCategories>,
+        loader:()=>fetch('https://rangdhanu-art-server.vercel.app/categories')
+      },
     ]
   }
 ])
