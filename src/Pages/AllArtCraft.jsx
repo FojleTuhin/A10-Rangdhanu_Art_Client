@@ -13,10 +13,10 @@ const AllArtCraft = () => {
 
 
             <div className="overflow-x-auto mt-5">
-                <table className="table">
+                <table className="table table-xs md:table-md">
                     {/* head */}
                     <thead>
-                        <tr className="text-[#3EA570] font-bold text-xl">
+                        <tr className="text-[#3EA570] font-bold md:text-xl">
                             <th>Image</th>
                             <th>Subcategories</th>
                             <th>Price</th>
@@ -28,11 +28,11 @@ const AllArtCraft = () => {
                         {
                             items.map(item=>
                                 <tr key={item._id}>
-                                <td><img className="h-[200px]" src={item.image} alt="" /></td>
-                                <td className="font-bold">{item.subcategory}</td>
-                                <td className="font-bold">{item.price} tk</td>
-                                <td className="font-bold">{item.rating}</td>
-                                <td><Link to={`viewDetails/${item._id}`}><button className="btn bg-[#3EA570] border-none text-white">View details</button></Link></td>
+                                <td><img className="h-[70px] md:h-[200px]" src={item.image} alt="" /></td>
+                                <td className="md:font-bold">{item.subcategory}</td>
+                                <td className="md:font-bold">{item.price} tk</td>
+                                <td className="md:font-bold">{item.rating}</td>
+                                <td><Link to={`viewDetails/${item._id}`}><button className="btn btn-sm md:btn-md bg-[#3EA570] border-none text-white">View details</button></Link></td>
                             </tr>)
                         }
                     </tbody>
