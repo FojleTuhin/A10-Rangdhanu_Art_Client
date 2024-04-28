@@ -26,7 +26,7 @@ const MyArtAndCraft = () => {
             if (result.isConfirmed) {
 
 
-                fetch(`https://rangdhanu-art-server-3s1p175os-fojle-tuhins-projects.vercel.app/item/${id}`,{
+                fetch(`http://localhost:5000/item/${id}`,{
                     method:'DELETE'
                 })
                     .then(res => res.json())
@@ -64,7 +64,7 @@ const MyArtAndCraft = () => {
 
                                         <p className="font-bold">{data.price} tk</p>
 
-                                        <p className=" text-[#4F95FF]">Stock: {data.stockStatus}</p>
+                                        <p className=" text-[#4F95FF] text-right">Stock: {data.stockStatus}</p>
 
                                     </div>
 

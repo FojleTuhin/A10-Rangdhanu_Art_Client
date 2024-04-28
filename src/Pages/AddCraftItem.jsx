@@ -1,6 +1,5 @@
 import { useContext } from "react";
 import { AuthContext } from "../Firebase/FirebaseProvider";
-import toast from "react-hot-toast";
 import Swal from "sweetalert2";
 
 const AddCraftItem = () => {
@@ -38,7 +37,7 @@ const AddCraftItem = () => {
 
         console.log(newItem);
         //send data to the server
-        fetch('https://rangdhanu-art-server-3s1p175os-fojle-tuhins-projects.vercel.app/item',{
+        fetch('http://localhost:5000/item',{
             method: 'POST',
             headers:{
                 'content-type':'application/json'
