@@ -17,7 +17,7 @@ const Popular = () => {
                     ]}
                 />
             </p>
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 ">
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 md:gap-8 gap-4">
                 <div className="bg-[#D9D9D9] rounded-xl ">
                     <img className="h-[270px] w-[250px] rounded-t-xl" src="https://i.ibb.co/kqD6f9K/353916793-249970294426807-4451598891261957386-n.jpg" alt="" />
                     <p className="mt-4 mb-4 text-center">Most famous</p>
