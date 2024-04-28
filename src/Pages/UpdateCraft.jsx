@@ -48,7 +48,7 @@ const UpdateCraft = () => {
         
 
         //send data to the server
-        fetch(`http://localhost:5000/item/${_id}`,{
+        fetch(`https://rangdhanu-art-server.vercel.app/item/${_id}`,{
             method: 'PuT',
             headers:{
                 'content-type':'application/json'

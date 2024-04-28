@@ -27,7 +27,7 @@ const router = createBrowserRouter([
       {
         path: '/',
         element: <Home></Home>,
-        loader:()=>fetch('http://localhost:5000/item')
+        loader:()=>fetch('https://rangdhanu-art-server.vercel.app/item')
       },
       {
         path: '/login',
@@ -44,29 +44,29 @@ const router = createBrowserRouter([
       {
         path:'/allArtCraft',
         element:<AllArtCraft></AllArtCraft>,
-        loader:()=>fetch('http://localhost:5000/item')
+        loader:()=>fetch('https://rangdhanu-art-server.vercel.app/item')
       },
       {
         path:'/viewDetails/:id',
         element:<PrivateRoute><ViewDetails></ViewDetails></PrivateRoute>,
-        loader:()=>fetch('http://localhost:5000/item')
+        loader:()=>fetch('https://rangdhanu-art-server.vercel.app/item')
         
       }, 
       {
         path:'/allArtCraft/viewDetails/:id',
         element:<PrivateRoute><ViewDetails></ViewDetails></PrivateRoute>,
-        loader:()=>fetch('http://localhost:5000/item')
+        loader:()=>fetch('https://rangdhanu-art-server.vercel.app/item')
         
       },
       {
         path:'/myArtAndCraft',
         element:<PrivateRoute><MyArtAndCraft></MyArtAndCraft></PrivateRoute>,
-        loader:()=>fetch('http://localhost:5000/item')
+        loader:()=>fetch('https://rangdhanu-art-server.vercel.app/item')
       },
       {
         path:'myArtAndCraft/updateCraft/:id',
         element:<PrivateRoute><UpdateCraft></UpdateCraft></PrivateRoute>,
-        loader:({params})=> fetch(`http://localhost:5000/item/${params.id}`)
+        loader:({params})=> fetch(`https://rangdhanu-art-server.vercel.app/item/${params.id}`)
       }
     ]
   }
