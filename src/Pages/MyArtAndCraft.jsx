@@ -26,7 +26,7 @@ const MyArtAndCraft = () => {
             if (result.isConfirmed) {
 
 
-                fetch(`http://localhost:5000/item/${id}`,{
+                fetch(`https://rangdhanu-art-server-3s1p175os-fojle-tuhins-projects.vercel.app/item/${id}`,{
                     method:'DELETE'
                 })
                     .then(res => res.json())

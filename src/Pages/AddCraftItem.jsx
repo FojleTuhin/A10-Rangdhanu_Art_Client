@@ -38,7 +38,7 @@ const AddCraftItem = () => {
 
         console.log(newItem);
         //send data to the server
-        fetch('http://localhost:5000/item',{
+        fetch('https://rangdhanu-art-server-3s1p175os-fojle-tuhins-projects.vercel.app/item',{
             method: 'POST',
             headers:{
                 'content-type':'application/json'
