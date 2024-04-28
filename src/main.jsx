@@ -17,6 +17,8 @@ import AllArtCraft from './Pages/AllArtCraft';
 import MyArtAndCraft from './Pages/MyArtAndCraft';
 import PrivateRoute from './Pages/PrivateRoute';
 import UpdateCraft from './Pages/UpdateCraft';
+import Categories from './Component/Categories';
+import SimilarCategories from './Pages/SimilarCategories';
 
 const router = createBrowserRouter([
   {
@@ -27,7 +29,7 @@ const router = createBrowserRouter([
       {
         path: '/',
         element: <Home></Home>,
-        loader:()=>fetch('https://rangdhanu-art-server.vercel.app/item')
+        loader:()=>fetch('https://rangdhanu-art-server.vercel.app/item'),
       },
       {
         path: '/login',
@@ -58,6 +60,7 @@ const router = createBrowserRouter([
         loader:()=>fetch('https://rangdhanu-art-server.vercel.app/item')
         
       },
+     
       {
         path:'/myArtAndCraft',
         element:<PrivateRoute><MyArtAndCraft></MyArtAndCraft></PrivateRoute>,
@@ -67,6 +70,14 @@ const router = createBrowserRouter([
         path:'myArtAndCraft/updateCraft/:id',
         element:<PrivateRoute><UpdateCraft></UpdateCraft></PrivateRoute>,
         loader:({params})=> fetch(`https://rangdhanu-art-server.vercel.app/item/${params.id}`)
+      },
+      {
+        path:'/categories',
+        element:<Categories></Categories>,
+      },
+      {
+        path:'/similarCategories',
+        element:<SimilarCategories></SimilarCategories>
       }
     ]
   }

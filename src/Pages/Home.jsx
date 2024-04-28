@@ -4,6 +4,7 @@ import Card from "../Component/Card";
 import Popular from "../Component/Popular";
 import Purchase from "../Component/Purchase";
 import { Typewriter } from "react-simple-typewriter";
+import Categories from "../Component/Categories";
 
 const Home = () => {
 
@@ -36,6 +37,7 @@ const Home = () => {
                 </div>
 
             </div>
+            <Categories></Categories>
             <Popular></Popular>
             <Purchase></Purchase>
 
