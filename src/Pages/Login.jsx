@@ -25,7 +25,8 @@ const Login = () => {
         googleLogin()
             .then(result => {
                 
-                toast.success('Successfully sign in')
+                toast.success('Successfully Log in')
+                navigate(location?.state ? location.state : '/')
                 console.log(result);
             })
             .catch(error => {
@@ -56,6 +57,7 @@ const Login = () => {
             navigate(location?.state ? location.state : '/')
         })
         .catch(error=>{
+            console.log(error);
             toast.error("Password or email don't match")
         })
     

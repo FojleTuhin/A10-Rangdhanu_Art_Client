@@ -22,7 +22,7 @@ const ViewDetails = () => {
     
     return (
         <div className='bg-[#F8F6F1] px-4 md:px-8 lg:px-[100px] pt-10 pb-1 text-black'>
-            <div className='grid grid-cols-2 px-14 py-8 gap-14 bg-[#fff] rounded-2xl'>
+            <div className='md:grid md:grid-cols-2 px-4 py-4 gap-6 md:px-14 md:py-8 md:gap-14 bg-[#fff] rounded-2xl'>
                 <div className='col-span-1'>
                     <img className='h-[500px] w-full rounded-2xl' src={image} alt="" />
                 </div>
@@ -30,7 +30,7 @@ const ViewDetails = () => {
 
                     <div>
                         <p className="mt-4 font-bold text-2xl"> {itemName}</p>
-                        <div className="flex justify-between mt-4 items-center">
+                        <div className="md:flex md:justify-between mt-4 items-center">
                             <p className=" font-bold text-xl">{subcategory}</p>
                             <p className="font-bold">Stock: {stockStatus}</p>
                         </div>
