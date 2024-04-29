@@ -26,8 +26,8 @@ const MyArtAndCraft = () => {
             if (result.isConfirmed) {
 
 
-                fetch(`https://rangdhanu-art-server.vercel.app/item/${id}`,{
-                    method:'DELETE'
+                fetch(`https://rangdhanu-art-server.vercel.app/item/${id}`, {
+                    method: 'DELETE'
                 })
                     .then(res => res.json())
                     .then(data => {
@@ -49,6 +49,15 @@ const MyArtAndCraft = () => {
         <div className='bg-[#F8F6F1] px-4 md:px-8 lg:px-[100px] pb-10 text-black '>
             <div className="bg-[#EBFBE5] text-[#3EA570] py-4">
                 <h1 className="font-bold text-xl text-center">My Art and Craft</h1>
+            </div>
+            <div >
+                <div className="dropdown dropdown-hover">
+                    <div tabIndex={0} role="button" className="btn m-1 bg-[#3EA570] text-white border-none ">Customization</div>
+                    <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow  rounded-box w-52">
+                        <li><a>Yes</a></li>
+                        <li><a>No</a></li>
+                    </ul>
+                </div>
             </div>
             <div className="flex gap-6 justify-center flex-wrap mt-5">
                 {
