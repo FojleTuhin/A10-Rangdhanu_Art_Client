@@ -19,6 +19,7 @@ const Categories = () => {
 
 
 
+
     return (
         <div className=' px-4 md:px-8 lg:px-[100px] pb-10 mt-10'>
 
@@ -40,7 +41,7 @@ const Categories = () => {
                     categories.map(categorie =>
                         <div key={categorie._id}>
 
-                            <Link to={`/similarCategories`}>
+                            <Link to={`/similarCategories/${categorie._id}`}>
                                 <div className="card w-[300px]  shadow-xl ">
                                     <figure className="px-6 pt-6">
                                         <img src={categorie.image} className="rounded-xl" />
