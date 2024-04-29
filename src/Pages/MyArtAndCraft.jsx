@@ -59,6 +59,7 @@ const MyArtAndCraft = () => {
                     </ul>
                 </div>
             </div>
+           
             <div className="flex gap-6 justify-center flex-wrap mt-5">
                 {
                     item.map(data =>

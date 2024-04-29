@@ -35,36 +35,36 @@ const AddCraftItem = () => {
             email
         }
 
-        console.log(newItem);
+        console.log(itemName,customization,stockStatus);
         //send data to the server
-        fetch('https://rangdhanu-art-server.vercel.app/item',{
+        fetch('https://rangdhanu-art-server.vercel.app/item', {
             method: 'POST',
-            headers:{
-                'content-type':'application/json'
+            headers: {
+                'content-type': 'application/json'
             },
-            body:JSON.stringify(newItem)
+            body: JSON.stringify(newItem)
         })
 
-        .then(res=> res.json())
-        .then(data=>{
-            console.log(data)
-            if(data.insertedId){
-                Swal.fire({
-                    position: "top-end",
-                    icon: "success",
-                    title: "Your craft has been saved",
-                    showConfirmButton: false,
-                    timer: 1500
-                  });
-            }
-        })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data)
+                if (data.insertedId) {
+                    Swal.fire({
+                        position: "top-end",
+                        icon: "success",
+                        title: "Your craft has been saved",
+                        showConfirmButton: false,
+                        timer: 1500
+                    });
+                }
+            })
 
         form.reset();
     }
 
     return (
         <div className="px-4 md:px-8 lg:px-[100px]  pb-1 bg-[#F8F6F1] ">
-             <div className="bg-[#EBFBE5] text-[#3EA570] py-4">
+            <div className="bg-[#EBFBE5] text-[#3EA570] py-4">
                 <h1 className="font-bold text-xl text-center">Add Art and Craft</h1>
             </div>
             <form onSubmit={handleAddItem}>
@@ -74,9 +74,16 @@ const AddCraftItem = () => {
                         <label className="label">
                             <span className="label-text text-black font-bold">Item_name</span>
                         </label>
-                        <label className="input-group">
-                            <input type="text" name="name" required  placeholder="Item Name" className="input input-bordered w-full bg-none bg-[#f4f3f0] text-black border-black" />
-                        </label>
+
+                        <select className="select w-full bg-none bg-[#f4f3f0] text-black border-black" name="name">
+                            <option disabled selected>Pick Your Item Name</option>
+                            <option>Landscape Painting</option>
+                            <option>Portrait Drawing</option>
+                            <option>Watercolour Painting</option>
+                            <option>Oil Painting</option>
+                            <option>Charcoal Sketching</option>
+                            <option>Cartoon Drawing</option>
+                        </select>
                     </div>
                     <div className="form-control md:w-1/2">
                         <label className="label">
@@ -121,9 +128,12 @@ const AddCraftItem = () => {
                         <label className="label">
                             <span className="label-text text-black font-bold">Customization</span>
                         </label>
-                        <label className="input-group">
-                            <input type="text" name="customization" required placeholder="Yes or No" className="input input-bordered w-full bg-none bg-[#f4f3f0] text-black border-black" />
-                        </label>
+                        <select className="select w-full bg-none bg-[#f4f3f0] text-black border-black" name="customization">
+                            <option disabled selected>Yes or No</option>
+                            <option>Yes</option>
+                            <option>No</option>
+
+                        </select>
                     </div>
                 </div>
                 {/* 4th div */}
@@ -140,9 +150,12 @@ const AddCraftItem = () => {
                         <label className="label">
                             <span className="label-text text-black font-bold">Stock_status</span>
                         </label>
-                        <label className="input-group">
-                            <input type="text" name="stockStatus" required placeholder="Yes or No" className="input input-bordered w-full bg-none bg-[#f4f3f0] text-black border-black" />
-                        </label>
+                        <select className="select w-full bg-none bg-[#f4f3f0] text-black border-black" name="stockStatus">
+                            <option disabled selected>Stock Status</option>
+                            <option>In Stock</option>
+                            <option>Made to order</option>
+
+                        </select>
                     </div>
                 </div>
                 {/* 5th div */}
@@ -157,7 +170,7 @@ const AddCraftItem = () => {
                     </div>
 
                 </div>
-                
+
                 <div className="md:flex mb-8 ">
                     <button className="btn bg-[#3EA570] border-none text-white w-1/2 justify-center m-auto">Add item</button>
                 </div>
