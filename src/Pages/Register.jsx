@@ -1,7 +1,7 @@
 import { useContext } from 'react';
 import toast, { Toaster } from 'react-hot-toast';
 import { FaFacebook, FaGoogle } from 'react-icons/fa';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../Firebase/FirebaseProvider';
 
 
@@ -23,12 +23,15 @@ const Register = () => {
 
     const {createUser, updateUser, googleLogin, facebookLogin} = useContext(AuthContext);
 
+    const location = useLocation();
+    const navigate = useNavigate();
+
+
     const handleGoogleLogin = () => {
         googleLogin()
             .then(result => {
-                
+                navigate(location?.state ? location.state : '/')
                 toast.success('Successfully sign in')
-                console.log(result);
             })
             .catch(error => {
                 toast.error('Something wrong')
@@ -55,7 +58,6 @@ const Register = () => {
         const password = e.target.password.value;
         const photo = e.target.photo.value;
     
-        console.log(name, email, password);
     
     
         if (password.length < 6) {
@@ -75,11 +77,14 @@ const Register = () => {
         createUser(email,password)
         .then(result=>{
             updateUser(name, photo)
+            navigate(location?.state ? location.state : '/')
             console.log(result);
         })
         .catch(error=>{
             console.log(error);
         })
+
+        
     
     }
 

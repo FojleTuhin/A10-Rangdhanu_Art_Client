@@ -3,6 +3,7 @@ import { FaFacebook, FaGoogle } from 'react-icons/fa';
 import { Link, Navigate, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../Firebase/FirebaseProvider';
 import toast from 'react-hot-toast';
+import Swal from 'sweetalert2';
 
 
 const logInStyle = {
@@ -25,7 +26,13 @@ const Login = () => {
         googleLogin()
             .then(result => {
                 
-                toast.success('Successfully Log in')
+                Swal.fire({
+                    position: "top-end",
+                    icon: "success",
+                    title: "Successfully login",
+                    showConfirmButton: false,
+                    timer: 1500
+                  });
                 navigate(location?.state ? location.state : '/')
                 console.log(result);
             })
@@ -54,11 +61,22 @@ const Login = () => {
 
         signIn(email, password)
         .then(result =>{
+            Swal.fire({
+                position: "top-end",
+                icon: "success",
+                title: "Successfully Login",
+                showConfirmButton: false,
+                timer: 1500
+              });
             navigate(location?.state ? location.state : '/')
         })
         .catch(error=>{
-            console.log(error);
-            toast.error("Password or email don't match")
+            Swal.fire({
+                icon: "error",
+                title: "Oops...",
+                text: "Password or email don't match!",
+                
+              });
         })
     
     }
