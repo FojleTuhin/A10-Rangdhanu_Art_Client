@@ -40,7 +40,7 @@ const Card = ({item}) => {
                         <hr className="bg-[#D1D1D1] mt-3 mb-3" />
 
                         <div className="card-actions">
-                            <Link to={`viewDetails/${_id}`}><button className="btn bg-[#3EA570] text-white">View details</button></Link>
+                            <Link to={`viewDetails/${_id}`}><button className="btn bg-[#3EA570] border-none text-white">View details</button></Link>
                         </div>
                     </div>
                 </div>
