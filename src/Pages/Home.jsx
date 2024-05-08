@@ -10,7 +10,7 @@ const Home = () => {
 
     const items =useLoaderData();
     return (
-        <div >
+        <div className="bg-[#F8F6F1] text-black">
             
 
 
