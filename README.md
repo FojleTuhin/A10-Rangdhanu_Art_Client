@@ -7,6 +7,9 @@
 ## 🔗 Link
 [![Website](https://img.shields.io/badge/website-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://rangdhanu-art.netlify.app/)
 
+## Overview
+<p>Rangdhanu Art is a web portfolio showcasing the artwork of an artist. The site features various categories of artwork, including paintings and digital art. It provides a visually appealing display of the artist's work, and allows visitors to explore different pieces in detail. The overall design is clean and user-friendly, emphasizing the visual content.</p>
+
 
 
 ## Features
@@ -20,18 +23,20 @@
 
 
 
-## Characteristics 
+## Technology 
+-Tailwind CSS
+- Daisy UI
+- React router dom
+- Tanstack query
+- Firebase
+- Mongodb
+- Express js
 
-
-- High-Quality 
-- Detailed Descriptions
-- Responsive Design
-- Use database 
-- see Price
-- Show Art 
-- Protective Router
-
-## Implement 2 packages
-
-- REACT TOOLTIP
-- REACT-SIMPLE-TYPEWRITTER
+## Locally use
+1. Clone the Project
+  https://github.com/FojleTuhin/A10-Rangdhanu_Art_Client.git
+2. Install Necessary Dependencies
+  npm i
+3. Set Up Configuration and Environment File
+4. Run the Project
+  npm run dev
