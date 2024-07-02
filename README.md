@@ -24,7 +24,7 @@
 
 
 ## Technology 
--Tailwind CSS
+- Tailwind CSS
 - Daisy UI
 - React router dom
 - Tanstack query
