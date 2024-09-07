@@ -22,42 +22,43 @@ const Navbar = () => {
 
 
     const links = <>
-        <Link to='/'><li><a className="font-medium text-[18px] text-white lg:text-black link link-hover">Home</a></li></Link>
-        <Link to='/allArtCraft'><li><a className="font-medium text-[18px] text-white lg:text-black link link-hover">All Art & craft</a></li></Link>
+        <Link to='/'><li><a className="font-medium text-[18px]   link link-hover">Home</a></li></Link>
+        <Link to='/allArtCraft'><li><a className="font-medium text-[18px]   link link-hover">All Art & craft</a></li></Link>
+
         {
-            user &&
-            <div className='flex'>
-                <Link to='/AddCraft'><li><a className="font-medium text-[18px] text-white lg:text-black link link-hover">Add Craft</a></li></Link>
-                <Link to='/MyArtAndCraft'><li><a className="font-medium text-[18px] text-white lg:text-black link link-hover">My Art&Craft</a></li></Link>
-            </div>
+            user && <Link to='/AddCraft'><li><a className="font-medium text-[18px]   link link-hover">Add Craft</a></li></Link>
         }
+        {
+            user && <Link to='/MyArtAndCraft'><li><a className="font-medium text-[18px]   link link-hover">My Art&Craft</a></li></Link>
+        }
+
     </>
     return (
-        <div className="px-4 md:px-8 lg:px-[100px]  text-black">
-            <div className="navbar pt-6">
+        <div className="px-4 md:px-8 lg:px-[100px]  text-black ">
+            <div className="navbar ">
                 <div className="navbar-start">
                     <div className="dropdown">
                         <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
                             <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
                         </div>
-                        <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                        <ul tabIndex={0} className="menu menu-sm dropdown-content  z-[1] p-2 shadow bg-black bg-opacity-50 rounded-box w-52">
                             {links}
 
 
                             {
                                 user ?
 
-                                    <div className='z-40'>
+                                    <div className='z-40 mt-5 mb-5 w-12 h-18'>
                                         <a id="clickable"><img className="w-12 h-12 border border-black mr-3 rounded-full" src={user.photoURL} /></a>
                                         <Tooltip anchorSelect="#clickable" clickable>
-                                            <button className='text-center font-bold m-auto'>{user.displayName}</button>
-                                            <Link> <a onClick={handleSignOut} className=" border border-black flex gap-2 justify-center items-center px-6 py-3 font-medium rounded-3xl"><FaRegUser /> Sign out</a></Link>
+                                            <button className='text-center mb-1 font-bold m-auto'>{user.displayName}</button>
+                                            <Link> <a onClick={handleSignOut} className=" border border-black flex gap-2 justify-center items-center px-4 py-2 font-medium rounded-3xl"><FaRegUser /> Sign out</a></Link>
                                         </Tooltip>
                                     </div>
                                     :
                                     <div className='md:flex gap-2 mt-4'>
-                                        <Link to='/login'> <a className=" border border-white md:border-black text-white md:text-black flex gap-2 justify-center items-center px-6 py-3 font-medium rounded-3xl"><FaRegUser /> Login</a></Link>
-                                        
+                                        <Link to='/login'> <a className=" border border-white md:border-black text-white md:text-black flex gap-2 justify-center items-center px-6 py-3 font-medium rounded-3xl bg-[#16325B]"><FaRegUser /> Login</a></Link>
+
                                     </div>
                             }
 
@@ -94,7 +95,7 @@ const Navbar = () => {
                             </div>
                             :
                             <div className='flex gap-2'>
-                                <Link to='/login'> <a className=" border border-black flex gap-2 justify-center items-center px-6 py-3 font-medium rounded-3xl"><FaRegUser /> Login</a></Link>
+                                <Link to='/login'> <a className=" border border-black flex gap-2 justify-center items-center px-6 py-3 font-medium rounded-3xl bg-[#16325B] text-white"><FaRegUser /> Login</a></Link>
                                 {/* <Link to='/register' className=" border border-black flex gap-2 justify-center items-center px-6 py-3 font-medium rounded-3xl"><FaRegUser />Sign up</Link> */}
                             </div>
                     }
