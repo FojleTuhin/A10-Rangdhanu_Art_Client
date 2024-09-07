@@ -85,7 +85,7 @@ const router = createBrowserRouter([
         element:<PrivateRoute><ViewDetails></ViewDetails></PrivateRoute>,
         loader:()=>fetch('https://rangdhanu-art-server.vercel.app/item')
         
-      },
+      }
     ]
   }
 ])

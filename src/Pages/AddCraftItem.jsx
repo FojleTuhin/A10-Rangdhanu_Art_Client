@@ -35,7 +35,7 @@ const AddCraftItem = () => {
             email
         }
 
-        console.log(itemName,customization,stockStatus);
+        // console.log(itemName,customization,stockStatus);
         //send data to the server
         fetch('https://rangdhanu-art-server.vercel.app/item', {
             method: 'POST',

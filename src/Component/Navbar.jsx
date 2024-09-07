@@ -22,13 +22,18 @@ const Navbar = () => {
 
 
     const links = <>
-        <Link to='/'><li><a className="font-medium text-white lg:text-black">Home</a></li></Link>
-        <Link to='/allArtCraft'><li><a className="font-medium text-white lg:text-black">All Art & craft</a></li></Link>
-        <Link to='/AddCraft'><li><a className="font-medium text-white lg:text-black">Add Craft</a></li></Link>
-        <Link to='/MyArtAndCraft'><li><a className="font-medium text-white lg:text-black">My Art&Craft</a></li></Link>
+        <Link to='/'><li><a className="font-medium text-[18px] text-white lg:text-black link link-hover">Home</a></li></Link>
+        <Link to='/allArtCraft'><li><a className="font-medium text-[18px] text-white lg:text-black link link-hover">All Art & craft</a></li></Link>
+        {
+            user &&
+            <div className='flex'>
+                <Link to='/AddCraft'><li><a className="font-medium text-[18px] text-white lg:text-black link link-hover">Add Craft</a></li></Link>
+                <Link to='/MyArtAndCraft'><li><a className="font-medium text-[18px] text-white lg:text-black link link-hover">My Art&Craft</a></li></Link>
+            </div>
+        }
     </>
     return (
-        <div className="px-4 md:px-8 lg:px-[100px] bg-[#FFF] text-black">
+        <div className="px-4 md:px-8 lg:px-[100px]  text-black">
             <div className="navbar pt-6">
                 <div className="navbar-start">
                     <div className="dropdown">
@@ -37,22 +42,22 @@ const Navbar = () => {
                         </div>
                         <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
                             {links}
-                          
+
 
                             {
                                 user ?
 
-                                <div className='z-40'>
-                                <a id="clickable"><img className="w-12 h-12 border border-black mr-3 rounded-full" src={user.photoURL} /></a>
-                                <Tooltip anchorSelect="#clickable" clickable>
-                                    <button className='text-center font-bold m-auto'>{user.displayName}</button>
-                                    <Link> <a onClick={handleSignOut} className=" border border-black flex gap-2 justify-center items-center px-6 py-3 font-medium rounded-3xl"><FaRegUser /> Sign out</a></Link>
-                                </Tooltip>
-                            </div>
+                                    <div className='z-40'>
+                                        <a id="clickable"><img className="w-12 h-12 border border-black mr-3 rounded-full" src={user.photoURL} /></a>
+                                        <Tooltip anchorSelect="#clickable" clickable>
+                                            <button className='text-center font-bold m-auto'>{user.displayName}</button>
+                                            <Link> <a onClick={handleSignOut} className=" border border-black flex gap-2 justify-center items-center px-6 py-3 font-medium rounded-3xl"><FaRegUser /> Sign out</a></Link>
+                                        </Tooltip>
+                                    </div>
                                     :
                                     <div className='md:flex gap-2 mt-4'>
                                         <Link to='/login'> <a className=" border border-white md:border-black text-white md:text-black flex gap-2 justify-center items-center px-6 py-3 font-medium rounded-3xl"><FaRegUser /> Login</a></Link>
-                                        <Link to='/register' className=" border mt-3 border-white md:border-black text-white md:text-black flex gap-2 justify-center items-center px-6 py-3 font-medium rounded-3xl"><FaRegUser />Sign up</Link>
+                                        
                                     </div>
                             }
 
@@ -75,7 +80,7 @@ const Navbar = () => {
 
 
 
-                   
+
 
                     {
                         user ?
@@ -90,7 +95,7 @@ const Navbar = () => {
                             :
                             <div className='flex gap-2'>
                                 <Link to='/login'> <a className=" border border-black flex gap-2 justify-center items-center px-6 py-3 font-medium rounded-3xl"><FaRegUser /> Login</a></Link>
-                                <Link to='/register' className=" border border-black flex gap-2 justify-center items-center px-6 py-3 font-medium rounded-3xl"><FaRegUser />Sign up</Link>
+                                {/* <Link to='/register' className=" border border-black flex gap-2 justify-center items-center px-6 py-3 font-medium rounded-3xl"><FaRegUser />Sign up</Link> */}
                             </div>
                     }
 
@@ -102,7 +107,7 @@ const Navbar = () => {
 
             </div>
 
-            <hr className=" border-black" />
+            {/* <hr className=" border-black" /> */}
         </div>
     );
 };

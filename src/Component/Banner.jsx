@@ -1,10 +1,9 @@
-import React from 'react';
 
 const Banner = () => {
     return (
-        <div className='px-4 md:px-8 lg:px-[100px] pt-5 pb-10'>
+        <div className=' pb-10'>
             <div className='flex justify-end'>
-                
+
             </div>
             <div className="carousel w-full h-[500px] mt-5">
                 <div id="slide1" className="carousel-item relative w-full">
