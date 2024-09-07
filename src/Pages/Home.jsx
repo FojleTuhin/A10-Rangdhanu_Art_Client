@@ -6,9 +6,14 @@ import Purchase from "../Component/Purchase";
 import { Typewriter } from "react-simple-typewriter";
 import Categories from "../Component/Categories";
 
+
 const Home = () => {
 
     const items = useLoaderData();
+   
+
+    
+
     return (
         <div >
 
@@ -31,7 +36,7 @@ const Home = () => {
                             ]}
                         />
                     </p>
-                    <div className="flex gap-6 justify-center flex-wrap">
+                    <div data-aos="zoom-in" className="flex gap-6 justify-center flex-wrap">
                         {
                             items.slice(0, 6).map(item => <Card key={item._id} item={item}></Card>)
                         }
