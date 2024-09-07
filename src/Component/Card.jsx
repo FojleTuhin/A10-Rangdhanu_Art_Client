@@ -19,7 +19,7 @@ const Card = ({ item }) => {
         <div>
             <div>
 
-                <div className="card group w-[300px]  bg-white bg-opacity-80 shadow-xl hover:bg-[#16325B] hover:text-white">
+                {/* <div data-aos="zoom-in-right" className="card group w-[300px]  bg-white bg-opacity-80 shadow-xl hover:bg-[#16325B] hover:text-white">
                     <figure className="px-6 pt-6">
                         <img src={image} className="rounded-xl h-[252px] w-[252px]" />
                     </figure>
@@ -43,11 +43,11 @@ const Card = ({ item }) => {
                             <Link to={`viewDetails/${_id}`}><button className="btn bg-[#16325B] group-hover:bg-white group-hover:text-[#16325B] border-none text-white w-full">View details</button></Link>
                         </div>
                     </div>
-                </div>
+                </div> */}
 
-                {/* <div className="card group w-[300px] bg-white bg-opacity-80 shadow-xl hover:bg-[#16325B] hover:text-white">
+                <div data-aos="zoom-in-right" className="card group w-[300px] bg-white bg-opacity-80 shadow-xl hover:bg-[#16325B] hover:text-white">
                     <figure className="px-6 pt-6">
-                        <img src={image} className="rounded-xl h-[252px] w-[252px]" />
+                        <img src={image} className="rounded-xl h-[252px] w-[252px] transition-transform duration-300 ease-in-out transform group-hover:scale-105" />
                     </figure>
                     <div className="card-body">
                         <h2 className="card-title text-[16px]">{subcategory}</h2>
@@ -62,11 +62,12 @@ const Card = ({ item }) => {
                         <hr className="mt-1 mb-1" />
                         <div className="">
                             <Link to={`viewDetails/${_id}`}>
-                                <button className="btn bg-[#16325B] border-none text-white w-full group-hover:bg-white group-hover:text-[#16325B]">View details</button>
+                                <button className="btn bg-[#16325B] group-hover:bg-white group-hover:text-[#16325B] border-none text-white w-full">View details</button>
                             </Link>
                         </div>
                     </div>
-                </div> */}
+                </div>
+
 
             </div>
         </div>
