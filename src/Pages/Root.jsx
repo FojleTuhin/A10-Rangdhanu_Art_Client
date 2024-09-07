@@ -4,7 +4,7 @@ import Navbar from "../Component/Navbar";
 
 const Root = () => {
     return (
-        <div>
+        <div className="bg-[url('https://i.ibb.co.com/yn0htCh/pexels-pixabay-268533.jpg')]  bg-cover bg-center bg-no-repeat bg-fixed ">
             <Navbar></Navbar>
             <Outlet></Outlet>
             <Footer></Footer>

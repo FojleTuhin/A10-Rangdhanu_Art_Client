@@ -22,19 +22,19 @@ const Navbar = () => {
 
 
     const links = <>
-        <Link to='/'><li><a className="font-medium text-[18px]   link link-hover">Home</a></li></Link>
-        <Link to='/allArtCraft'><li><a className="font-medium text-[18px]   link link-hover">All Art & craft</a></li></Link>
+        <Link to='/'><li><a className="font-medium text-[18px] text-black  link link-hover">Home</a></li></Link>
+        <Link to='/allArtCraft'><li><a className="font-medium text-[18px] text-black  link link-hover">All Art & craft</a></li></Link>
 
         {
-            user && <Link to='/AddCraft'><li><a className="font-medium text-[18px]   link link-hover">Add Craft</a></li></Link>
+            user && <Link to='/AddCraft'><li><a className="font-medium text-[18px] text-black  link link-hover">Add Craft</a></li></Link>
         }
         {
-            user && <Link to='/MyArtAndCraft'><li><a className="font-medium text-[18px]   link link-hover">My Art&Craft</a></li></Link>
+            user && <Link to='/MyArtAndCraft'><li><a className="font-medium text-[18px] text-black  link link-hover">My Art&Craft</a></li></Link>
         }
 
     </>
     return (
-        <div className="px-4 md:px-8 lg:px-[100px]  text-black ">
+        <div className="px-4 md:px-8 lg:px-[100px]  bg-white ">
             <div className="navbar ">
                 <div className="navbar-start">
                     <div className="dropdown">

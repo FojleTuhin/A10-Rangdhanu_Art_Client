@@ -10,7 +10,7 @@ const Home = () => {
 
     const items =useLoaderData();
     return (
-        <div className="">
+        <div >
             
 
 

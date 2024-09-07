@@ -19,12 +19,12 @@ const Card = ({item}) => {
         <div>
             <div>
 
-                <div className="card w-[300px]  shadow-xl ">
+                <div className="card w-[300px] h-[524px]  shadow-xl ">
                     <figure className="px-6 pt-6">
-                        <img src={image} className="rounded-xl" />
+                        <img src={image} className="rounded-xl h-[252px] w-[252px]" />
                     </figure>
                     <div className="card-body ">
-                        <h2 className="card-title">{subcategory}</h2>
+                        <h2 className="card-title text-[16px]">{subcategory}</h2>
                         <div className="flex items-center justify-between">
 
                             <p className="text-xl font-bold">{price} tk</p>
