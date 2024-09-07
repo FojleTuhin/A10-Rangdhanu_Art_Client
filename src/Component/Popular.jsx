@@ -4,7 +4,7 @@ const Popular = () => {
     return (
         <div className="px-4 md:px-8 lg:px-[100px] pt-10 pb-1 font-semibold">
 
-            <p className="mb-10 font-bold text-3xl text-center ">
+            <p className="mb-10 font-bold text-3xl text-center text-white">
                 <Typewriter
                     cursor
                     cursorBlinking

@@ -1,9 +1,9 @@
-import { FaLocationDot, FaStar } from "react-icons/fa6";
+import { FaStar } from "react-icons/fa6";
 import { Link } from "react-router-dom";
 
-const Card = ({item}) => {
+const Card = ({ item }) => {
 
-    const{_id,
+    const { _id,
         subcategory,
         image,
         price,
@@ -13,13 +13,13 @@ const Card = ({item}) => {
         stockStatus,
         description,
         userName,
-        email}=item;
+        email } = item;
 
     return (
         <div>
             <div>
 
-                <div className="card w-[300px] h-[524px]  shadow-xl ">
+                <div className="card w-[300px]  bg-white bg-opacity-80 shadow-xl ">
                     <figure className="px-6 pt-6">
                         <img src={image} className="rounded-xl h-[252px] w-[252px]" />
                     </figure>
@@ -28,19 +28,19 @@ const Card = ({item}) => {
                         <div className="flex items-center justify-between">
 
                             <p className="text-xl font-bold">{price} tk</p>
-                            <p className="text-xl font-bold text-right text-[#4F95FF]">Stock: {stockStatus}</p>
+                            <p className="text-xl font-bold text-right text-[#16325B]">Stock: {stockStatus}</p>
 
                         </div>
 
                         <div className="flex items-center gap-2">
-                        <FaStar />
+                            <FaStar />
                             <p>{rating}</p>
                         </div>
 
-                        <hr className="bg-[#D1D1D1] mt-3 mb-3" />
+                        <hr className=" mt-1 mb-1" />
 
-                        <div className="card-actions">
-                            <Link to={`viewDetails/${_id}`}><button className="btn bg-[#3EA570] border-none text-white">View details</button></Link>
+                        <div className="">
+                            <Link to={`viewDetails/${_id}`}><button className="btn bg-[#16325B] border-none text-white w-full">View details</button></Link>
                         </div>
                     </div>
                 </div>

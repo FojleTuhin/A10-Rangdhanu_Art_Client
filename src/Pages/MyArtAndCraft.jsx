@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useContext } from "react";
 import { Link, useLoaderData } from "react-router-dom";
 import { AuthContext } from "../Firebase/FirebaseProvider";
 import { FaPen, FaStar } from "react-icons/fa6";
