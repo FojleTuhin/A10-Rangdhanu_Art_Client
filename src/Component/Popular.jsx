@@ -18,19 +18,19 @@ const Popular = () => {
                 />
             </p>
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 md:gap-8 gap-4">
-                <div data-aos="fade-right" className="bg-[#D9D9D9] rounded-xl ">
+                <div  className="bg-[#D9D9D9] rounded-xl ">
                     <img className="h-[270px] w-[250px] rounded-t-xl" src="https://i.ibb.co/kqD6f9K/353916793-249970294426807-4451598891261957386-n.jpg" alt="" />
                     <p className="mt-4 mb-4 text-center">Most famous</p>
                 </div>
-                <div data-aos="fade-right" className="bg-[#D9D9D9] rounded-xl ">
+                <div  className="bg-[#D9D9D9] rounded-xl ">
                     <img className="h-[270px] w-[250px] rounded-t-xl" src="https://i.ibb.co/yk1wz3b/436986258-798510442162064-7164722731068788277-n.jpg" alt="" />
                     <p className="mt-4 mb-4 text-center">Most famous</p>
                 </div>
-                <div data-aos="fade-left" className="bg-[#D9D9D9] rounded-xl">
+                <div  className="bg-[#D9D9D9] rounded-xl">
                     <img className="h-[270px] w-[250px] rounded-t-xl" src="https://i.ibb.co/hsfnKX8/385524991-324124630386814-490333696148519164-n.jpg" alt="" />
                     <p className="mt-4 mb-4 text-center">Most famous</p>
                 </div>
-                <div data-aos="fade-left" className="bg-[#D9D9D9] rounded-xl justify-center">
+                <div  className="bg-[#D9D9D9] rounded-xl justify-center">
                     <img className="h-[270px] w-[250px] rounded-t-xl" src="https://i.ibb.co/TbCxf7r/361543682-634210018673836-4282878231442221567-n.jpg" alt="" />
                     <p className="mt-4 mb-4 text-center">Most famous</p>
                 </div>
