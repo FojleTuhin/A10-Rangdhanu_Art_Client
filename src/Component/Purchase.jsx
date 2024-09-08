@@ -1,5 +1,17 @@
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import { useEffect } from 'react';
 
 const Purchase = () => {
+
+    useEffect(() => {
+        AOS.init({
+          duration: 1200, // Customize the animation duration
+          once: false,    // Set to false to trigger animations on each scroll
+        });
+      }, []);
+      
+      
     return (
         <div data-aos="fade-left" className="px-4 md:px-8 lg:px-[100px] pt-10 pb-10  mt-14 md:grid grid-cols-2 lg:grid-cols-3  gap-10">
             <div className="bg-[#F8F6F1] px-10 py-10 rounded-2xl mt-5 md:mt-0">
