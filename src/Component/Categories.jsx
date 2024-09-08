@@ -42,7 +42,7 @@ const Categories = () => {
                         <div key={categorie._id}>
 
                             <Link to={`/similarCategories/${categorie._id}`}>
-                                <div className="card group w-[300px] h-[435px]  bg-[#16325B] text-white hover:bg-opacity-80 hover:bg-white hover:text-black shadow-xl ">
+                                <div className="card group w-[300px] h-[435px] bg-opacity-80 bg-white text-black  hover:bg-[#16325B] hover:text-white shadow-xl ">
                                     <figure className="px-6 pt-6 ">
                                         <img src={categorie.image} className="rounded-xl h-[252px] w-[252px]" />
                                     </figure>
@@ -51,7 +51,7 @@ const Categories = () => {
                                         <div className="flex items-center justify-between">
 
                                             <p className="text-xl font-bold">{categorie.price} tk</p>
-                                            <p className="text-xl font-bold text-right text-white group-hover:text-black">Stock: {categorie.stockStatus}</p>
+                                            <p className="text-xl font-bold text-right  ">Stock: {categorie.stockStatus}</p>
 
                                         </div>
 
