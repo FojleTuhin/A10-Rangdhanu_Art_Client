@@ -45,7 +45,7 @@ const Card = ({ item }) => {
                     </div>
                 </div> */}
 
-                <div  className="card group w-[300px] bg-white bg-opacity-80 shadow-xl hover:bg-[#16325B] hover:text-white">
+                <div className="card group w-[300px] bg-white bg-opacity-80 shadow-xl hover:bg-[#16325B] hover:text-white">
                     <figure className="px-6 pt-6">
                         <img src={image} className="rounded-xl h-[252px] w-[252px] transition-transform duration-300 ease-in-out transform group-hover:scale-105" />
                     </figure>

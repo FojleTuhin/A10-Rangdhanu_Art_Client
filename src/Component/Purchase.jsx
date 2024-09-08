@@ -1,7 +1,7 @@
 
 const Purchase = () => {
     return (
-        <div className="px-4 md:px-8 lg:px-[100px] pt-10 pb-10  mt-14 md:grid grid-cols-2 lg:grid-cols-3  gap-10">
+        <div data-aos="fade-left" className="px-4 md:px-8 lg:px-[100px] pt-10 pb-10  mt-14 md:grid grid-cols-2 lg:grid-cols-3  gap-10">
             <div className="bg-[#F8F6F1] px-10 py-10 rounded-2xl mt-5 md:mt-0">
                 <img src="https://i.ibb.co/LZVytGz/Frame-1000001713.png" alt="" />
                 <p className="mt-7 mb-7 font-bold text-xl">Robust ID Verification.</p>
