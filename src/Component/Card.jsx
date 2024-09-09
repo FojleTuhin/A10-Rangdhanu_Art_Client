@@ -50,7 +50,7 @@ const Card = ({ item }) => {
                         <img src={image} className="rounded-xl h-[252px] w-[252px] transition-transform duration-300 ease-in-out transform group-hover:scale-105" />
                     </figure>
                     <div className="card-body">
-                        <h2 className="card-title text-[16px]">{subcategory}</h2>
+                        <h2 className="card-title text-[16px] font-medium">{subcategory}</h2>
                         <div className="flex items-center justify-between">
                             <p className="text-xl font-bold">{price} tk</p>
                             <p className="text-xl font-bold text-right">Stock: {stockStatus}</p>

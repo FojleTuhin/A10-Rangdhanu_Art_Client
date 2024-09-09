@@ -21,9 +21,9 @@ const Categories = () => {
 
 
     return (
-        <div className=' px-4 md:px-8 lg:px-[100px] pb-10 mt-10'>
+        <div className=' px-4 md:px-8 lg:px-[100px] pb-10 mt-20'>
 
-            <p className="mb-10 font-bold text-3xl text-center text-white">
+            <p className="mb-2 font-bold text-3xl text-center text-white">
                 <Typewriter
                     cursor
                     cursorBlinking
@@ -36,6 +36,7 @@ const Categories = () => {
                     ]}
                 />
             </p>
+            <h3 className="text-white text-[20px] font-semibold text-center mb-12">Click any image and go to the similar catogories art and craft page</h3>
             <div className="flex gap-6 justify-center flex-wrap ">
                 {
                     categories.map(categorie =>
@@ -60,9 +61,9 @@ const Categories = () => {
                                             <p>{categorie.rating}</p>
                                         </div>
 
-                                        
 
-                                       
+
+
                                     </div>
                                 </div>
                             </Link>

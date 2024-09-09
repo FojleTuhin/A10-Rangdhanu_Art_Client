@@ -1,4 +1,3 @@
-import React, { useRef, useState } from 'react';
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
 
@@ -6,7 +5,6 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/effect-coverflow';
 import 'swiper/css/pagination';
-
 import './styles.css';
 
 // import required modules
@@ -16,6 +14,15 @@ import { EffectCoverflow, Pagination } from 'swiper/modules';
 const Carousel = () => {
     return (
         <>
+
+
+            <div>
+                <p className='text-center mt-20 text-white text-4xl font-bold mb-3'>Some of our beautiful painting</p>
+                <p className='text-xl font-semibold text-center text-white w-[70%] mx-auto mt-5 mb-10'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Et, quo ex distinctio eius dolore reprehenderit itaque aspernatur ipsam ipsum facilis similique veniam animi earum aut aliquid blanditiis odit nemo quos laborum nulla cum velit? Illo numquam sed asperiores sapiente. Dicta.</p>
+
+            </div>
+
+
             <Swiper
                 effect={'coverflow'}
                 grabCursor={true}
