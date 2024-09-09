@@ -19,19 +19,19 @@ const Popular = () => {
             </p>
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 md:gap-8 gap-4">
                 <div  className="bg-[#D9D9D9] rounded-xl ">
-                    <img className="h-[270px] w-[250px] rounded-t-xl" src="https://i.ibb.co/kqD6f9K/353916793-249970294426807-4451598891261957386-n.jpg" alt="" />
+                    <img className="h-[270px] w-[250px] rounded-t-xl" src="https://i.ibb.co.com/KLfX4P1/pexels-steve-1606591.jpg" alt="" />
                     <p className="mt-4 mb-4 text-center">Most famous</p>
                 </div>
                 <div  className="bg-[#D9D9D9] rounded-xl ">
-                    <img className="h-[270px] w-[250px] rounded-t-xl" src="https://i.ibb.co/yk1wz3b/436986258-798510442162064-7164722731068788277-n.jpg" alt="" />
+                    <img className="h-[270px] w-[250px] rounded-t-xl" src="https://i.ibb.co.com/m4ChDJ6/pexels-iriser-1005711.jpg" alt="" />
                     <p className="mt-4 mb-4 text-center">Most famous</p>
                 </div>
                 <div  className="bg-[#D9D9D9] rounded-xl">
-                    <img className="h-[270px] w-[250px] rounded-t-xl" src="https://i.ibb.co/hsfnKX8/385524991-324124630386814-490333696148519164-n.jpg" alt="" />
+                    <img className="h-[270px] w-[250px] rounded-t-xl" src="https://i.ibb.co.com/wyJvtqY/tony-litvyak-Gs9-Z3r2-Yi0-Q-unsplash.jpg" alt="" />
                     <p className="mt-4 mb-4 text-center">Most famous</p>
                 </div>
                 <div  className="bg-[#D9D9D9] rounded-xl justify-center">
-                    <img className="h-[270px] w-[250px] rounded-t-xl" src="https://i.ibb.co/TbCxf7r/361543682-634210018673836-4282878231442221567-n.jpg" alt="" />
+                    <img className="h-[270px] w-[250px] rounded-t-xl" src="https://i.ibb.co.com/YTm41f4/pexels-w-w-299285-889839.jpg" alt="" />
                     <p className="mt-4 mb-4 text-center">Most famous</p>
                 </div>
 
