@@ -16,8 +16,8 @@ const Carousel = () => {
         <>
 
 
-            <div>
-                <p className='text-center mt-20 text-white text-4xl font-bold mb-3'>Some of our beautiful painting</p>
+            <div className='p-5'>
+                <p className='text-center mt-20 text-white text-4xl font-bold mb-3  '>Some of our beautiful painting</p>
                 <p className='text-xl font-semibold text-center text-white w-[70%] mx-auto mt-5 mb-10'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Et, quo ex distinctio eius dolore reprehenderit itaque aspernatur ipsam ipsum facilis similique veniam animi earum aut aliquid blanditiis odit nemo quos laborum nulla cum velit? Illo numquam sed asperiores sapiente. Dicta.</p>
 
             </div>

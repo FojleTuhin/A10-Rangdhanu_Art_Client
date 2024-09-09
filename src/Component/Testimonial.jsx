@@ -18,9 +18,7 @@ const Testimonial = () => {
                             <input type="radio" name="rating-2" className="mask mask-star-2 bg-[#FEC84B]" checked="checked" />
                             <input type="radio" name="rating-2" className="mask mask-star-2 bg-[#FEC84B]" />
                         </div>
-                        <p className="text-[18px]  my-7">"The level Of the secuirity provided by Cypherplay is
-                            unmatched. I feel confident using my card for both everyday purchases and travel. It's the peace
-                            of mind I wos looking for."</p>
+                        <p className="text-[18px]  my-7">The level Of the secuirity provided by Cypherplay is unmatched. I feel confident using my card for both everyday purchases and travel. It's the peace of mind I wos looking for.</p>
                         <div className="">
                             <div className="flex justify-center">
                                 <img className="rounded-full h-12 w-12 " src="https://i.ibb.co/Hz0jFN0/pexels-italo-melo-881954-2379004.jpg" alt="" />

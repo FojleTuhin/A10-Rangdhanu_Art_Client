@@ -20,20 +20,20 @@ const Popular = () => {
             <h3 className="text-white text-[20px] font-semibold text-center mb-12">See our popular painting</h3>
 
 
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 md:gap-8 gap-4">
-                <div className="bg-[#16325B] rounded-xl text-white">
+            <div className="flex justify-center gap-8 flex-wrap">
+                <div className="bg-[#16325B] w-[250px] rounded-xl text-white">
                     <img className="h-[270px] w-[250px] rounded-t-xl" src="https://i.ibb.co.com/KLfX4P1/pexels-steve-1606591.jpg" alt="" />
                     <p className="mt-4 mb-4 text-center">Most famous</p>
                 </div>
-                <div className="bg-[#16325B] rounded-xl text-white ">
+                <div className="bg-[#16325B] w-[250px] rounded-xl text-white ">
                     <img className="h-[270px] w-[250px] rounded-t-xl" src="https://i.ibb.co.com/m4ChDJ6/pexels-iriser-1005711.jpg" alt="" />
                     <p className="mt-4 mb-4 text-center">Most famous</p>
                 </div>
-                <div className="bg-[#16325B] rounded-xl text-white">
+                <div className="bg-[#16325B] w-[250px] rounded-xl text-white">
                     <img className="h-[270px] w-[250px] rounded-t-xl" src="https://i.ibb.co.com/wyJvtqY/tony-litvyak-Gs9-Z3r2-Yi0-Q-unsplash.jpg" alt="" />
                     <p className="mt-4 mb-4 text-center">Most famous</p>
                 </div>
-                <div className="bg-[#16325B] rounded-xl text-white">
+                <div className="bg-[#16325B] w-[250px] rounded-xl text-white">
                     <img className="h-[270px] w-[250px] rounded-t-xl" src="https://i.ibb.co.com/YTm41f4/pexels-w-w-299285-889839.jpg" alt="" />
                     <p className="mt-4 mb-4 text-center">Most famous</p>
                 </div>

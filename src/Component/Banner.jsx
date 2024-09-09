@@ -24,7 +24,7 @@ const Banner = () => {
                 <div id="slide2" className="carousel-item relative w-full lg:h-[600px] md:h-[500px] h-[400px]">
                     <div className="w-full lg:h-[600px] md:h-[500px] h-[400px] relative">
                         <img src="https://i.ibb.co.com/Jc6pQ7Z/liam-heywood-anyes-IPWPY-unsplash.jpg" className="w-full lg:h-[600px] md:h-[500px] h-[400px]" />
-                        <div className="absolute w-[50%] text-white left-1/4 top-1/3 text-center transform -translate-y-1/3 ">
+                        <div className="absolute w-[50%] text-white left-1/4 top-1/2 md:top-1/3 text-center transform -translate-y-1/3 ">
                             <h1 className="lg:text-5xl md:text-3xl text-xl font-bold ">Unlock Your Inner Artist</h1>
                             <p className="mt-5 lg:text-3xl md:text-xl">Discover the joy of painting and creativity. Join our community of artists and let your imagination run wild</p>
 
@@ -41,7 +41,7 @@ const Banner = () => {
                 <div id="slide3" className="carousel-item relative w-full lg:h-[600px] md:h-[500px] h-[400px]">
                     <div className="w-full lg:h-[600px] md:h-[500px] h-[400px] relative">
                         <img src="https://i.ibb.co.com/kH0fGZ4/debabrata-dash-R6-Cu-Frk-Ocl-I-unsplash.jpg" className="w-full lg:h-[600px] md:h-[500px] h-[400px]" />
-                        <div className="absolute w-[50%] text-black left-1/4 top-1/3 text-center transform -translate-y-1/3 ">
+                        <div className="absolute w-[50%] text-white md:text-black left-1/4 top-1/2 md:top-1/3 text-center transform -translate-y-1/3 ">
                             <h1 className="lg:text-5xl md:text-3xl text-xl font-bold ">Unlock Your Inner Artist</h1>
                             <p className="mt-5 lg:text-3xl md:text-xl">Discover the joy of painting and creativity. Join our community of artists and let your imagination run wild</p>
 
