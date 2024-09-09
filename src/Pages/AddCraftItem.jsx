@@ -63,7 +63,7 @@ const AddCraftItem = () => {
     }
 
     return (
-        <div className="px-4 md:px-8 lg:px-[100px]  pb-1 bg-[#F8F6F1] ">
+        <div className="px-4 md:px-8 lg:px-[100px]  pb-1 bg-[#F8F6F1] pt-16">
             <div className="bg-[#EBFBE5] text-[#3EA570] py-4">
                 <h1 className="font-bold text-xl text-center">Add Art and Craft</h1>
             </div>
