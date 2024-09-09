@@ -8,9 +8,9 @@ const Testimonial = () => {
                     <h3 className="text-white text-[40px] font-bold text-center pb-2">Testimonials</h3>
                     <h3 className="text-white w-[60%] mx-auto text-[20px] font-semibold text-center pb-8">Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus libero magnam quia repellendus cupiditate nihil consectetur placeat corporis est. Laboriosam.</h3>
                 </div>
-                <div className="lg:flex pl-6 md:ml-0 gap-8 justify-center">
+                <div className="flex flex-wrap gap-8 justify-center ">
 
-                    <div className="bg-[#16325B] text-white py-8 w-[330px] h-[420px] md:w-[450px] md:h-[364px]  p-8 rounded-b-full hover:rounded-b-[0px] hover:rounded-t-full">
+                    <div className="bg-[#16325B] text-white py-8 w-[280px] md:w-[330px] md:h-[420px] lg:w-[450px]   p-8 rounded-b-full hover:rounded-b-[0px] hover:rounded-t-full">
                         <div className="rating ">
                             <input type="radio" name="rating-2" className="mask mask-star-2 bg-[#FEC84B]" />
                             <input type="radio" name="rating-2" className="mask mask-star-2 bg-[#FEC84B]" />
@@ -28,7 +28,7 @@ const Testimonial = () => {
                             <p className="">Marketing Manager, XYZ</p>
                         </div>
                     </div>
-                    <div className="bg-[#16325B] text-white py-8 w-[330px] h-[420px] md:w-[450px] md:h-[364px]  p-8 mt-10 lg:mt-0 rounded-b-full hover:rounded-b-[0px] hover:rounded-t-full">
+                    <div className="bg-[#16325B] text-white py-8 w-[280px] md:w-[330px] md:h-[420px] lg:w-[450px]  p-8 mt-10 md:mt-0 rounded-b-full hover:rounded-b-[0px] hover:rounded-t-full">
                         <div className="rating ">
                             <input type="radio" name="rating-2" className="mask mask-star-2 bg-[#FEC84B]" />
                             <input type="radio" name="rating-2" className="mask mask-star-2 bg-[#FEC84B]" />
