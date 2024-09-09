@@ -42,7 +42,7 @@ const Categories = () => {
                         <div key={categorie._id}>
 
                             <Link to={`/similarCategories/${categorie._id}`}>
-                                <div className="card group w-[300px] h-[435px] bg-opacity-80 bg-white text-black  hover:bg-[#16325B] hover:text-white shadow-xl ">
+                                <div className="card group w-[300px] h-[435px]  bg-[#16325B]  text-white  hover:bg-white hover:text-black hover:bg-opacity-80 shadow-xl ">
                                     <figure className="px-6 pt-6 ">
                                         <img src={categorie.image} className="rounded-xl h-[252px] w-[252px]" />
                                     </figure>
