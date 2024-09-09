@@ -1,5 +1,6 @@
 import { useLoaderData } from "react-router-dom";
-import { Typewriter } from "react-simple-typewriter";
+// import { Typewriter } from "react-simple-typewriter";
+import 'animate.css';
 import Card from "./Card";
 
 const CraftItem = () => {
@@ -9,8 +10,8 @@ const CraftItem = () => {
         <div>
             <div className="px-4 md:px-8 lg:px-[100px] mt-20  pb-1">
 
-                <p className="mb-10 font-bold text-3xl text-center text-white">
-                    <Typewriter
+                <p className="mb-10 font-bold text-3xl text-center text-white animate__animated animate__bounceInLeft">
+                    {/* <Typewriter
                         cursor
                         cursorBlinking
                         delaySpeed={1000}
@@ -20,7 +21,10 @@ const CraftItem = () => {
                         words={[
                             'Art and Craft',
                         ]}
-                    />
+                    /> */}
+
+
+                    Art and Craft
                 </p>
                 <div>
                     <div className="flex gap-6 justify-center flex-wrap">

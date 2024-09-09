@@ -36,7 +36,7 @@ const Categories = () => {
                     ]}
                 />
             </p>
-            <div className="flex gap-6 justify-center flex-wrap">
+            <div className="flex gap-6 justify-center flex-wrap ">
                 {
                     categories.map(categorie =>
                         <div key={categorie._id}>
