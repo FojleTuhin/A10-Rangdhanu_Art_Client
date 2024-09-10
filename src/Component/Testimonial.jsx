@@ -28,7 +28,7 @@ const Testimonial = () => {
                             </div>
 
                             <h3 className=" text-[20px] font-semibold">Tony Stark</h3>
-                            <p className="">Marketing Manager, XYZ</p>
+                            <p className="">Student</p>
                         </div>
                     </div>
                     <div className="bg-[#16325B] text-white py-8 w-[280px] md:w-[330px] md:h-[420px] lg:w-[450px]  p-8 mt-10 md:mt-0 rounded-b-full hover:rounded-b-[0px] hover:rounded-t-full">
@@ -46,7 +46,7 @@ const Testimonial = () => {
                             </div>
 
                             <h3 className=" text-[20px] font-semibold">Tony Stark</h3>
-                            <p className="">Marketing Manager, XYZ</p>
+                            <p className="">Student</p>
                         </div>
                     </div>
                 </div>

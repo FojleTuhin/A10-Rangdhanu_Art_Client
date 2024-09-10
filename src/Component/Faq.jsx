@@ -7,7 +7,7 @@ const Faq = () => {
 
                 <div className="collapse collapse-arrow ">
                     <input type="radio" name="my-accordion-2" defaultChecked />
-                    <div className="collapse-title text-xl font-medium  bg-[#FFFFF5] px-11"> WWhat courses are offered at রঙধনু আর্ট একাডেমি?
+                    <div className="collapse-title text-xl font-medium  bg-[#FFFFF5] px-11"> What courses are offered at রঙধনু আর্ট একাডেমি?
                     </div>
                     <div className="collapse-content px-0">
                         <hr />
