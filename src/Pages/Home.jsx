@@ -5,6 +5,7 @@ import Categories from "../Component/Categories";
 import CraftItem from "../Component/CraftItem";
 import Testimonial from "../Component/Testimonial";
 import Carousel from "../Component/Carousel";
+import Faq from "../Component/Faq";
 
 
 const Home = () => {
@@ -27,6 +28,7 @@ const Home = () => {
                 <Categories></Categories>
                 <Purchase></Purchase>
                 <Testimonial></Testimonial>
+                <Faq></Faq>
             </div>
 
         </div>
