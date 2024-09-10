@@ -4,7 +4,7 @@ const Popular = () => {
     return (
         <div className="px-4 md:px-8 lg:px-[100px] pt-10 pb-1 font-semibold">
 
-            <p className="mb-2 font-bold text-3xl text-center text-white">
+            {/* <p className="mb-2 font-bold text-3xl text-center text-white">
                 <Typewriter
                     cursor
                     cursorBlinking
@@ -17,8 +17,11 @@ const Popular = () => {
                     ]}
                 />
             </p>
-            <h3 className="text-white text-[20px] font-semibold text-center mb-12">See our popular painting</h3>
+            <h3 className="text-white text-[20px] font-semibold text-center mb-12">See our popular painting</h3> */}
 
+
+            <button className="btn bg-[#FBFBFB] py-[10px] px-6 rounded-3xl text-[#020043] mb-4 ">Popular Art and craft</button>
+            <p className="text-4xl font-semibold mb-[100px] text-[#020043]">See our popular painting</p>
 
             <div className="flex justify-center gap-8 flex-wrap">
                 <div className="bg-[#16325B] w-[250px] rounded-xl text-white">

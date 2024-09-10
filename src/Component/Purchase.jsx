@@ -8,7 +8,7 @@ const Purchase = () => {
     return (
         <div>
             <div>
-                <p className='text-center mt-20 text-white text-4xl font-bold mb-3'>Purchase our painting easily</p>
+                <p className='text-center mt-20 text-[#020043] text-4xl font-bold mb-3'>Purchase our painting easily</p>
                 <p className='text-xl font-semibold text-center text-white w-[70%] mx-auto mt-5 mb-10'>Bringing beautiful art into your home has never been easier! At Rangdhanu Academy, we offer a wide selection of stunning, original paintings created by our talented students and instructors. </p>
 
             </div>

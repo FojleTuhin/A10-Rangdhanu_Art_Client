@@ -23,7 +23,7 @@ const Categories = () => {
     return (
         <div className=' px-4 md:px-8 lg:px-[100px] pb-10 mt-20'>
 
-            <p className="mb-2 font-bold text-3xl text-center text-white">
+            <p className="mb-2 font-bold text-3xl text-center text-[#020043]">
                 <Typewriter
                     cursor
                     cursorBlinking

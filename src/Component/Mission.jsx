@@ -6,7 +6,7 @@ const Mission = () => {
             <div className="md:w-[40%]  p-5 md:p-0">
                 <button className="btn bg-[#FFFFF5] py-[11px] px-6 rounded-3xl text-[#020043] mb-4 mt-5 md:mt-0">Who we are</button>
 
-                <p className="text-4xl font-semibold text-white mb-4 mt-10 md:mt-0">We Help You Unlock Your Creative Potential</p>
+                <p className="text-4xl font-semibold text-[#020043] mb-4 mt-10 md:mt-0">We Help You Unlock Your Creative Potential</p>
                 <p className="text-white text-[16px]">At Rangdhanu Academy, we believe that every individual has an artist within. Our mission is to provide a nurturing environment where creativity flourishes, offering a platform for students of all ages to explore, learn, and grow their artistic skills. Whether you're a beginner or an experienced artist, our academy is dedicated to helping you enhance your talent with expert guidance, personalized support, and inspiring classes that push the boundaries of creativity.
                     <br />
                     Join us on a journey where imagination meets skill, and where every student finds their unique artistic voice.</p>

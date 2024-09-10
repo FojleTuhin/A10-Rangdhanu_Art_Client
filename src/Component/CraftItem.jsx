@@ -24,8 +24,12 @@ const CraftItem = () => {
                     /> */}
 
 
-                    Art and Craft
+                    {/* Art and Craft */}
                 </p>
+
+
+                <button className="btn bg-[#FBFBFB] py-[10px] px-6 rounded-3xl text-[#020043] mb-4 ">Art and Craft</button>
+                <p className="text-4xl font-semibold mb-[50px] text-[#020043]">Frequntly Asked Question</p>
                 <div>
                     <div className="flex gap-6 justify-center flex-wrap">
                         {

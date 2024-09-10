@@ -17,8 +17,8 @@ const Carousel = () => {
 
 
             <div className='p-5'>
-                <p className='text-center mt-20 text-white text-4xl font-bold mb-3  '>Some of our beautiful painting</p>
-                <p className='text-xl font-semibold text-center text-white w-[70%] mx-auto mt-5 mb-10'>At Rangdhanu Academy, our students create extraordinary works of art that reflect their unique talents and creative journeys. From vibrant landscapes to abstract masterpieces, each painting tells a story of passion, dedication, and artistic growth. </p>
+                <p className='text-center mt-20 text-[#020043] text-4xl font-bold mb-3  '>Some of our beautiful painting</p>
+                <p className='text-xl font-semibold text-center text-white w-[70%] mx-auto mt-5 '>At Rangdhanu Academy, our students create extraordinary works of art that reflect their unique talents and creative journeys. From vibrant landscapes to abstract masterpieces, each painting tells a story of passion, dedication, and artistic growth. </p>
 
             </div>
 
