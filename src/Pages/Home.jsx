@@ -6,6 +6,7 @@ import CraftItem from "../Component/CraftItem";
 import Testimonial from "../Component/Testimonial";
 import Carousel from "../Component/Carousel";
 import Faq from "../Component/Faq";
+import Mission from "../Component/Mission";
 
 
 const Home = () => {
@@ -21,7 +22,7 @@ const Home = () => {
 
             <Banner></Banner>
             <div className="max-w-7xl mx-auto">
-                
+                <Mission></Mission>
                 <CraftItem></CraftItem>
                 <Carousel></Carousel>
                 <Popular></Popular>
