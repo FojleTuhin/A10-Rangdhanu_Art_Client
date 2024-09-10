@@ -2,7 +2,7 @@ import { MdOutlineArrowOutward } from "react-icons/md";
 
 const Mission = () => {
     return (
-        <div className="max-w-6xl mx-auto mt-20 px-5 gap-5 md:flex  ">
+        <div className="max-w-6xl mx-auto mt-20 px-1 gap-5 md:flex  ">
             <div className="md:w-[40%]  p-5 md:p-0">
                 <button className="btn bg-[#FFFFF5] py-[11px] px-6 rounded-3xl text-[#020043] mb-4 mt-5 md:mt-0">Who we are</button>
 

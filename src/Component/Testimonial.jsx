@@ -1,7 +1,7 @@
 
 const Testimonial = () => {
     return (
-        <div className="max-w-6xl md:px-8 mx-auto mt-20 mb-20">
+        <div className="max-w-6xl px-4 md:px-8 mx-auto mt-20 mb-20">
             <button className="btn bg-[#FBFBFB] py-[10px] px-6 rounded-3xl text-[#020043] mb-4 ">Testimonial</button>
             <p className="text-4xl font-semibold mb-[30px] text-[#020043]">Hear What Our Students Say
             </p>
